@@ -1,0 +1,33 @@
+# Maven
+target/
+
+# Eclipse
+bin/
+.settings/
+.project
+.classpath
+.factorypath
+
+# Eclipse STS plugin
+.springBeans
+
+# IntelliJ
+out/
+.idea/
+*.iml
+
+# MagicDraw
+*.mdzip.bak
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# H2 database files
+*.mv.db
+*.h2.db
+
+#stupid folders which break your code
+db/
+target/

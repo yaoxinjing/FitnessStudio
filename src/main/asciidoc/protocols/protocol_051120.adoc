@@ -1,0 +1,45 @@
+= Protokoll Gruppe 03
+
+Treffen am 05.11.2020
+
+Ort:      BBB +
+Beginn:   11:10 Uhr +
+Ende:     12:00 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+12.11.2020, 11:10 Uhr, BBB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alex
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Videoshop als Aufgabe
+* Hinweise zu Klassendiagramm und Pflichtenheft
+
+== Retrospektive des letzten Sprints
+E-Mail-Aufgabe des Gästebuchs wurde von jedem Gruppenmitglied erledigt
+
+== Planung des nächsten Sprints
+Videoshop bis zum 15.11.20 fertigstellen (Aufgabenverteilung in Tabelle), UML-Diagramm und Pflichtenheft erstellen
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|Bewertungen     |Crash für Bewertungen mit mehr als 5 Sternen abfangen |Alexander                |in Bearbeitung
+|Kategorien     |Auf der Seite von Filmen Anzeigen, ob es eine DVD oder BluRay ist |Daniel                |in Bearbeitung
+|Bestellungen     |Crash für Bestellung mit mehr Produkten als vorhanden sind abfangen |Justus                |in Bearbeitung
+|PDF     |Nach Kauf wird ein PDF erzeug und zum Download angeboten, welches die Bestelldetails enthält             |Nils                |in Bearbeitung
+|Rabatte     |Rabatte sollen manuell eingestellt werden können           |Sebastian                |in Bearbeitung
+|Registrierung     |Crash für Registerierung bei bereits existrierendem Benutznamen |Yaoxin                |in Bearbeitung
+|===

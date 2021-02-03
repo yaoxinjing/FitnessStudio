@@ -1,0 +1,62 @@
+= Protokoll Gruppe 03
+
+Treffen am 28.01.2021
+
+Ort:      Discord +
+Beginn:   11:10 Uhr +
+Ende:     11:30 Uhr
+
+__Schriftführer:__ Justus
+
+__Teilnehmer:__
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* wichtige Dokumente bis Sonntag fertigstellen
+** Doku, Evaluation, Zeiterfassung
+* Testabdeckung wieder erhöhen
+* Bugs und Ungenauigkeiten in Doku eintragen
+* Ergebnisse in Zeiterfassung eintragen
+* Präsentation
+** beim Vorgehen mehr zu eigenen Entscheidungen
+** Entwurfsmuster
+** vertikal oder horizontal
+** Branching-Modell
+** Test-Strategie
+** Probleme bei Entwicklung
+** erste 10 min präsentieren, dann 10 min Entwicklungsprozess
+** evtl. TU Dresden Template
+* Readme
+* Hinweis zu PDF in .jar
+* Test-Logins
+
+== Retrospektive des letzten Sprints
+
+|===
+|Aufgabe |Status |Bemerkung
+|Cross-Testing-Report bearbeiten |abgeschlossen |
+|Entwicklerdoku     |abgeschlossen |
+|Testplan     |abgeschlossen |
+|===
+
+== Planung des nächsten Sprints
+
+[option="headers"]
+|===
+|Issue |Aufgabe |Beschreibung |Verantwortlicher |Status
+|#67      |Entwicklerdoku        |UML-Diagramme hinzufügen |Sebastian                 |in Bearbeitung
+|#66      |Mitgliedsbeiträge       |Aufnahme von Beiträgen in Statistik |Allgemein                 |in Bearbeitung
+|#65      |Laufende Kosten       |Kosten in Statistik einpflegen |Justus                 |in Bearbeitung
+|#64      |Footer       |allgemein überarbeiten |Nils                 |in Bearbeitung
+|#62      |Commoditys       |Boxen für Produkte im Shop sollten gleiche höhe haben |Sebastian              |in Bearbeitung
+|#57      |Cross-Testing-Report       |offene Probleme beheben |Allgemein                 |in Bearbeitung
+|#53      |Training Requests       |Problem beim Erstellen von Training Requests |Justus                 |in Bearbeitung
+|#49      |MHD       |MHD bei Produkten soll überprüft werden |Nils                 |in Bearbeitung
+|===

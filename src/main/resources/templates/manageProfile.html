@@ -1,0 +1,209 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/request.css}" rel="stylesheet"
+        href="../static/resources/css/request.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{manageProfile.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+       <!-- Haupt-Navigationsleiste -->
+       <nav th:include="navigation :: navigation"></nav>
+
+       <!-- Verwaltungs-Navigationsleiste -->
+       <nav th:include="manageNavigation :: manageNavigation"></nav>
+        
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{manageProfile.change}">Daten ändern</header>
+            <hr>
+            <form method="post" role="form" class="ui form" id="form" th:action="@{/manageProfile}" th:object="${form}">
+
+                <table>
+                    <!-- Linke Seite -->
+                    <tr>
+                        <td>
+                            <table><tr><td class="field">
+                                <label for="name" th:text="#{manageProfile.username}">Username</label>
+                                <input th:attr="disabled=${fieldDisabled}" th:field="*{username}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+                                    <p>Der Userame darf nicht leer sein.</p>
+                                </div>
+                            </td></tr><tr><td class="field">
+                                <label for="name" th:text="#{manageProfile.firstname}">Firstname</label>
+                                <input th:attr="disabled=${fieldDisabled}" th:field="*{firstname}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">
+                                    <p>Der Firstname darf nicht leer sein.</p>
+                                </div>
+                            </td></tr><tr><td class="field">
+                                <label for="name" th:text="#{manageProfile.lastname}">Lastname</label>
+                                <input th:attr="disabled=${fieldDisabled}" th:field="*{lastname}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">
+                                    <p>Der Lastname darf nicht leer sein.</p>
+                                </div>
+                            </td></tr></table>
+                        </td>  
+                        <!-- Rechte Seite -->
+                        <td>
+                            <img th:src="${'/resources/bilder/person.png'}">
+                        </td>
+                    </tr>
+                </table>
+                        
+                <!-- second table among the split with picture-->
+                <table>
+                    <tr>
+                        <td class="field">
+                            <label for="street" th:text="#{manageProfile.street}">Strasse</label>
+                            <input id="street" name="street" th:field="*{street}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('street')}" th:errors="*{street}">Die Adresse darf
+                                nicht leer sein.</p>
+                        </td><td class="field">
+                            <label for="housenumber" th:text="#{manageProfile.housenumber}">Hausnummer</label>
+                            <input id="housenumber" name="address" th:field="*{housenumber}" th:errorclass="fieldError" type="number" min="0" max="9999" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('housenumber')}" th:errors="*{housenumber}">Die Adresse darf
+                                nicht leer sein.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="addressaddition" th:text="#{manageProfile.addressaddition}">Adresszusatz</label>
+                            <input id="addressaddition" name="addressaddition" th:field="*{addressaddition}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('addressaddition')}" th:errors="*{addressaddition}">Die Adresse darf
+                                nicht leer sein.</p>
+                        </td><td class="field">
+                            <label for="city" th:text="#{manageProfile.city}">Stadt</label>
+                            <input id="city" name="city" th:field="*{city}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('city')}" th:errors="*{city}">Die Adresse darf
+                                nicht leer sein.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="postalcode" th:text="#{manageProfile.postalcode}">PLZ</label>
+                            <input id="postalcode" name="postalcode" th:field="*{postalcode}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('postalcode')}" th:errors="*{postalcode}">Die Adresse darf
+                                nicht leer sein.</p>
+                        </td><td class="field">
+                            <label for="phonenumber" th:text="#{manageProfile.phonenumber}">Telefonnummer</label>
+                            <input id="phonenumber" name="phonenumber" th:field="*{phonenumber}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}">Die Telefonnummer darf
+                                nicht leer sein.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- third table with wide inputs-->
+                <table>
+                    <tr>
+                        <td class="field">
+                            <label for="email" th:text="#{manageProfile.email}">Email</label>
+                            <input id="email" name="email" th:field="*{email}" th:errorclass="fieldError" type="email" required="required"/><br/>
+                            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Die Email darf
+                                nicht leer sein.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="password" th:text="#{manageProfile.password}">Passwort</label>
+                            <input id="password" name="password" th:field="*{password}" th:errorclass="fieldError" type="password" placeholder="(unveraendert)"/><br/>
+                            <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Das Passwort darf
+                                nicht leer sein.</p>
+                        </td>
+                    </tr>
+                </table> 
+                <hr>
+                <button type="submit" class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{button.submit}">Speichern</button>
+            </form>
+
+
+            <form method="post" role="form" class="ui form" id="contractForm" th:action="@{/manageContract}" th:object="${contractForm}" th:remove="${showContract}? none : all">
+
+                <div class="field">
+                    <label for="name" th:text="#{manageProfile.description}">Beschreibung</label>
+                    <input th:attr="disabled=${fieldDisabled}" th:field="*{description}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                    <!-- <div class="ui negative message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+                        <p>Der Userame darf nicht leer sein.</p>
+                    </div> -->
+                </div>
+                <div class="field">
+                    <label for="name" th:text="#{manageProfile.price}">Monatliche Kosten</label>
+                    <input th:attr="disabled=${fieldDisabled}" th:field="*{price}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                    <!-- <div class="ui negative message" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">
+                        <p>Der Firstname darf nicht leer sein.</p>
+                    </div> -->
+                </div>        
+                <div class="field">
+                    <label for="name" th:text="#{manageProfile.starttime}">Anfangsdatum</label>
+                    <input th:attr="disabled=${fieldDisabled}" th:field="*{startTime}" th:errorclass="fieldError" type="date" required="required"/><br/>
+                    <!-- <div class="ui negative message" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">
+                        <p>Der Lastname darf nicht leer sein.</p>
+                    </div> -->
+                </div>                    
+            <div class="field">
+                <label for="street" th:text="#{manageProfile.endtime}">Enddatum</label>
+                <input id="street" name="street" th:field="*{endTime}" th:errorclass="fieldError" type="date" required="required"/><br/>
+                <!-- <p th:if="${#fields.hasErrors('street')}" th:errors="*{street}">Die Adresse darf
+                    nicht leer sein.</p>
+            </div> -->
+            <hr>
+            <button type="submit" class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{button.submit}">Speichern</button>
+        </form>
+        
+        <!-- Anträge -->
+        <article sec:authorize="hasAnyRole('BOSS','EMPLOYEE')">
+            <header th:text="#{manageProfile.requests}">Requests</header>
+            <hr>
+            <table class="bigtable">
+                <thead>
+                    <tr>
+                    	<th id="btelement" th:text="#{request.type}">Type</th>
+                        <th id="btelement" th:text="#{request.filingDate}">Filing Date</th>
+                        <th id="btelement" th:text="#{request.state}">State</th>
+                        <th id="btelement" th:text="#{request.functions}">Functions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${requestList}">
+                        <td th:text="${request.getTypeString()}">Pausierungsantrag</td>
+                        <td th:text="${request.getFilingDate()}">23.10.2020</td>
+					    <td th:text="${request.getStateString()}">In Process</td>
+                        <td>                            
+							<div th:switch="${request.getTypeString()}">
+								<p th:case="'Pausierungsantrag'"> 											
+									<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+									<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+									<a th:href="@{/manageRequest/editPauseRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>									
+								</p>
+								<p th:case="'Trainingsantrag'"> 
+									<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+									<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+									<a  th:href="@{/manageRequest/editTrainingRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>
+								</p>
+								<p th:case="'Urlaubsantrag'"> 
+									<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+									<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+									<a  th:href="@{/manageRequest/editVacationRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>
+								</p>
+							</div>                      
+                        </td>                                              
+                    </tr>
+                </tbody>          
+            </table>       
+        </article>
+        </article>
+        
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

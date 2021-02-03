@@ -1,0 +1,75 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2020/21
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von: Nils Reinhardt**
+
+**Gruppe: 03**
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+// Ausführung der positiven und negativen Erfahrungen, die im Softwarepraktikum gesammelt wurden
+ * Programmieren im Team
+ * Erfahrung mit HTML, CSS und JAVA
+ * Git Kentnisse ausgebaut
+ * erweiterte Erfahrung mit Unit Tests
+ * erstellung verschiedener Entwurfsdiagramme mit verschiedenen Tools
+ * Einblick in Entwicklungsprozess, von der Analyse über den Entwurf, bis hin zur Implementierung
+ * Dokumentation ist wichtig, da Code öfter gelesen wird als geschrieben
+ * Der Kunde Lebt in seiner eigenen Welt
+ * einige Sachen sind leichter getan als gesagt, oft scheut man sich vor Aufgaben, welche sich am Ende als trivial herausstellen
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+
+* Viele Programmierer implizieren keine Produktivität, die Organisation muss stimmen
+* Koordination ist wichtig, um die Man-Power maximal ausschöpfen zu können
+* eine klare Absprache ist von hoher Bedeutung, um unklarheiten vorzubeugen
+* Teamarbeit lief besser als erwartet, kommunikation war sehr gut
+* der Anfang fiel schwer da man einander nicht kannte und das Kennenlernen gestaltete sich aufgrund der Umstände schwierig
+
+* als Scrum Master würde ich beim nächsten mal noch mehr darauf Acht geben:
+** das Zepter in die Hand zu nehmen um mehr Produktivität zu gewährleisten
+** einen besseren Überblick über das gesamte Projekt zu haben, anfangs gab es kaum Fortschritte, später wusste ich gar nicht mehr was überhaupt schon implementiert war geschweige denn von wem
+** meiner Meinung nach muss der Scrum Master nicht den Durchblick, wohl aber den Überblick haben und den habe ich über die Zeit leider verloren
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+
+* Features werden erleichtert, Framework nimmt Arbeit ab
+* die Dokumentationen der Frameworks beschreiben zwar theoretisch wie etwas funktioniert, ob die Methode daraufhin tut was sie laut Definition soll, sei mal dahingestellt
+* je spezifischer das Verlangen nach einem Feature umso weniger Beiträge oder Dokumentation ist im Netz zu finden
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+
+* eine Einführungsveranstaltung (Einführung in das Framework) wäre sehr hilfreich gewesen, wir wurden direkt ins kalte Wasser geworfen
+* meiner Meinung nach war das Pflichtenheft inhaltlich übertrieben, ich vertrete durchaus die Meinung, das Dokumentation wichtig ist, aber jeden Anwendungsfall auzuformulieren, halte ich für obsolet (Beispiele folgen)
+** Anwendungsfallbeschreibungen (größtenteils Selbsterklärend)
+** Akzeptanztestfälle (erkären eigentlich auch nur das was schon im Namen steckt)
+* Das Ausarbeiten des Pflichtenhefts war durchaus eine monotone, repetitive Arbeit, welche weder Spaß machte, noch einen großen Nutzen hatte, da man durch den hohen Umfang davor zurückschreckte einen Blick hinein zu werfen
+* in der Einführungsveranstaltung und den wöchentlichen Teammeetings wurde oft von Scrum gesprochen, wie genau es funktioniert und was es umfasst hat uns jedoch nie jemand erzählt, auch hier hätte ich mir eine genauere Einführung und im späteren Betreuung durch den Tutor gewünscht, welcher sukzessive Tipps gibt und Einblicke gewährt, wie laut Scrum weiter vorzugehen ist
+* die Beziehung zwischen verschiedenen Gruppen als Gelegenheit sich auszutauschen sollte in meinen Augen mehr gefördert werden
+** ich hatte das Gefühl, das versucht wurde die Gruppen gegenseitig auszuspielen um dem Motto "Wettkampf steigert die Produktivität" treu zu bleiben, was in meinen Augen aber völlig nach hinten los ging, weil sich am Ende viele nur schlecht gefühlt haben oder unter Druck gesetzt wurden, weil andere Gruppen bereits mehr Features implementiert oder ein ästhetischeres Frontend vorzuweisen hatten
+** ich ziehe den Vorschlag in betracht bewusst Gruppen miteinander zu verknüpfen um den Austausch zu steigern, ein konkreter Vorschlag wäre ein zweites Crosstesting einzuberufen, in welchem das Programm einer anderen Gruppe getestet wird und daraufhin ein Meeting mit der anderen Gruppe vereinbart wird um fachliche Fragen zu klären und Ideen auszutauschen
+* das Praktikum lehnt zwar an die Softwaretechnologie Vorlesung an, weshalb ich nachvollziehen kann, dass das haupt Augenmerk auf dem mit Java entwickelten Backend liegt, jedoch hätte ich mir gwünscht, 
+** dass für die Frontend-Entwicklung mehr Grundwissen vermittelt wird, sodass am ende keine stumpfen Formulare, sondern hübsche Designs entstehen können
+** dass in der Vorlesung wenigstens ansatzweise auf die Funktionsweise einer Webanwendung referenziert wird, sowie damit grundsätzlich zusammenhängende Komponenten (Datenbank, Aufgaben und Verbindung Backend / Frontend) erläutert werden
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+
+* gutes Feedback zum zeitlichen Stand des Projektes
+* sehr gut vorbereitet, wusste immer welche Dokumente fehlen oder noch ausbaufähig sind und welche Muss-Kriterien noch nicht erfüllt wurden
+* es herschte oft ein kleines Schweigen nachdem der Tutor eine Frage gestellt hat, was man hätte vermeiden können, wenn der Tutor Studenten direkt angesprochen hätte (trifft nur gelegentlich zu, da der Tutor oft nicht weiß, wer den angefragten Part übernommen hat)
+* bei allen fachlichen fragen wurden wir vom Tutor ans Forum verwiesen
+** in anbetracht dessen, dass der Tutor nur die Rolle des Kunden einnimt, habe ich dafür vollstes Verständnis
+** demgegnüber handelte es sich gelegentlich um banale Themen, die auch ohne einen Verweis auf das Forum geklärt hätten werden können
+* das Meeting war oft schon nach kurzer Zeit vorbei, wohingegen ich nichts einzuwenden habe, da alle wesentlichen Themen geklärt waren, dennoch hätte ich mir irgendwie gewünscht, das die übrige Zeit genutzt wird um weitere Inhalte zu vermitteln
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?
+
+* ich hätte mir eine nicht personalisierte Evaluation nach dem Praktikum gewünscht
+
+

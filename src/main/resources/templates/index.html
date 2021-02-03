@@ -1,0 +1,102 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{index.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Hauptelement1 -->
+        <article class="mainelement">
+            <header>Über diese Seite</header>
+            <hr>
+            <p>Herzlich willkommen auf unserer Homepage!<br>
+            Hier haben Sie die Möglichkeit sich über unsere Öffnungszeiten zu informieren oder unsere Bilder zu betrachten.<br>
+            Des Weiteren können Sie hier Ihren Account verwalten. Hierfür ist es jedoch notwendig eingeloggt zu sein. Falls sie noch keinen
+            Account besitzen, können Sie sich gerne und jederzeit einen erstellen und Mitglied werden.</p>
+        </article>
+
+        <!-- Hauptelement2 -->
+        <article class="mainelement">
+            <header>Keine Motivation? Kein Problem!</header>
+            <hr>
+            <table align="center">
+                <tr>
+                    <td>
+                        <p>
+                            Wir stehen Ihnen gerne auch in schwierigen Zeiten zur Seite und unterstützen Sie bei Ihrem Workout.<br>
+                            Weiterhin bieten wir Ihnen die Möglichkeit die Mitgliedschaft für einen Monat ohne Grund auszusetzen, 
+                            falls Sie doch einmal genug vom Training haben.
+                        </p>
+                    </td>
+                    <td>
+                        <iframe width="480" height="260" src="https://www.youtube.com/embed/fGTREsE4kAM"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- Hauptelement3 -->
+        <article class="mainelement">
+            <header>Homeworkout gefällig?</header>
+            <hr>
+            <table align="center">
+                <tr>
+                    <td>
+                        <p>
+                            Fitnessstudio geschlossen und Sie können keinen Sport machen? <br>
+                            Das klingt nur nach einer schlechten Ausrede. <br>
+                            Sport zu Hause ist auch sehr effektiv, vor allem wenn die 
+                            Workouts von unserem professionellen Trainerteam ausgiebig getestet
+                            wurden.
+                        </p>
+                    </td>
+                    <td>
+                        <iframe width="480" height="260" src="https://www.youtube.com/embed/UYWBfKXPJvA" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </td>
+                </tr>
+            </table>
+        </article>
+        
+        <!-- Hauptelement4 -->
+        <article class="mainelement">
+            <header>Unsere Leistungen</header>
+            <hr>
+            <table align="center">
+                <tr>
+                    <td>
+                        <p>
+                            <ul>
+                            	<li>1-monatige Mitgliedschaft</li>
+                            	<li>Monatlich kündbar</li>
+                            	<li>Zugang zu allen Studios</li>
+                            	<li>Kostenlose Trainings-Kurse</li>
+                            	<li>Individuelles Training mit unseren Experten</li>
+                            	<li>Freier Zugang zum Saunabereich</li>                         
+                            </ul>                           
+                            <header>Zum Preis von nur 20 Euro!</header>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+    <!-- footer Navigation -->
+    <nav th:include="footerNav :: footerNav"></nav>
+
+    </body>
+</html>

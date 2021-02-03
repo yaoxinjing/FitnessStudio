@@ -1,0 +1,102 @@
+/*  Navigationsleiste */
+.navigationbar {
+    position: fixed;
+    width: 100%;
+    background-color: #424242;
+    overflow: hidden;
+    z-index: 3;
+    white-space: nowrap;
+  }
+  
+/* Einstellung für alle a-Tags in Navigationsleiste */
+.navigationbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2%;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 2vw;
+  }
+
+.navigationbar k {
+    color: #1BA157;
+    text-align: center;
+    padding: 2%;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 2vw;
+  }
+  
+/* Hintergrundfarbe und Textfarbe beim hovern ändern */
+.navigationbar a:hover {
+    background-color: #1BA157;
+  }
+    
+/* Textfeld in der mitte anzeigen */
+.navigationbar-centered  {
+    float: none;
+    position: absolute;
+    padding: 2%;
+    color: white;
+    font-size: 2vw;
+    /* genau Mittig justieren */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+/* Rechtsorientierte Elemente in der Navigationsleiste */
+#navigationbar-right {
+    float: right;
+  }
+
+#navigationbar-rightSpace {
+    margin-right: 1.6vw;
+  }
+
+  #navigationbar-left {
+    float: left;
+  }
+
+
+.menu {
+  display: block;
+  margin: 0 auto;
+  z-index: 3;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  list-style-type:none;
+  line-height: normal;
+}
+
+
+
+/* https://codepen.io/timbeckett/pen/PoqbpXL */
+.menu > li > a {
+  background: #424242;
+  color: #1BA157;
+  display: block;
+  padding: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5vw;
+  width: 4vw;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.menu ul {
+  height: 0;
+  right: 5vw;
+  opacity: 0;
+  position: absolute;
+  transition: all .5s ease;
+  top: 0px;
+  list-style-type:none;
+}
+
+.menu li:hover ul {
+  height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}

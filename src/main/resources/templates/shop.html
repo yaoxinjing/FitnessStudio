@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/shop.css}" rel="stylesheet"
+          href="../static/resources/css/shop.css" type="text/css"/>
+          <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+		href="../static/resources/css/navigationbar.css" type="text/css"/>
+		<link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <title th:text="#{shop.title}">Shop</title>
+</head>
+<body>
+
+<nav th:include="navigation :: navigation"></nav>
+
+		<!-- Show all Drinks on Webpage -->
+		<div class="shopelement shoptags">
+			<header th:text="#{shop.drinks}">Drinks</header>
+			<hr>
+			<div class="commodity" th:each="drink : ${Drinks}">
+				<span th:text="${drink.name}">Drink</span><br>
+				<span th:text="${drink.getPriceUnitless()}"></span>
+				<div class="commodityImage"><img th:src="${'/resources/bilder/'+drink.getName()+'.jpg'}" onerror="this.onerror=null; this.src='/resources/bilder/drink_default.jpg'" class="image">
+				<a th:href="@{/cart/addCommodity/{id}(id=${drink.id})}" class="overlay">
+    				<span class="text" th:text="${drink.getDescription()}">Product description</span>
+  				</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Show all Supplements on Webpage -->
+		<div class="shopelement shoptags">
+			<header th:text="#{shop.supplements}">Supplements</header>
+			<hr>
+			<div class="commodity" th:each="supplement : ${Supplements}">
+				<span th:text="${supplement.name}">Supplement</span><br>
+				<span th:text="${supplement.getPriceUnitless()}"></span>
+				<div class="commodityImage"><img th:src="${'/resources/bilder/'+supplement.getName()+'.jpg'}" onerror="this.onerror=null; this.src='/resources/bilder/supplement_default.jpg'" class="image">
+  					<a th:href="@{/cart/addCommodity/{id}(id=${supplement.id})}" class="overlay">
+    					<span class="text" th:text="${supplement.getDescription()}">Product description</span>
+  					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Show all Supplements on Webpage -->
+		<div class="shopelement shoptags">
+			<header th:text="#{shop.equipment}">Equipment</header>
+			<hr>
+			<div class="commodity" th:each="equipment : ${Equipment}">
+				<span th:text="${equipment.name}">Supplement</span><br>
+				<span th:text="${equipment.getPriceUnitless()}"></span>
+				<div class="commodityImage"><img th:src="${'/resources/bilder/'+equipment.getName().replace(' ','_')+'.jpg'}" onerror="this.onerror=null; this.src='/resources/bilder/equipment_default.jpg'" class="image">
+  					<a th:href="@{/cart/addCommodity/{id}(id=${equipment.id})}" class="overlay">
+    					<span class="text" th:text="${equipment.getDescription()}">Product description</span>
+  					</a>
+				</div>
+			</div>
+		</div>
+
+	
+	<div class="cart shoptags" >
+		<header th:text="#{shop.cart}">Cart</header>
+		<hr>
+		<table align="center">
+			<tr>
+				<th class="carttablerow" th:text="#{shop.table.name}">Name</th>
+				<th class="carttablerow" th:text="#{shop.table.amount}">Amount</th>
+				<th class="carttablerow" th:text="#{shop.table.price}">Price</th>
+			</tr>
+			<tr th:each="cartItem : ${Cart}">
+				<td class="carttablerow"> <a  th:href="@{/cart/removeCommodity/{id}(id=${cartItem.id})}" th:text="${cartItem.getProduct().getName()}"></a></td>
+				<td class="carttablerow"> <span th:text="${cartItem.getQuantity()}"></span></td>
+				<td class="carttablerow"> <span th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(cartItem.getPrice())}"></span></td>
+			</tr>
+			<tr>
+				<th class="carttablerow"></th>
+				<th class="carttablerow"></th>
+				<th class="carttablerow"><u><span th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(cart?.getPrice())}"></span></u></th>
+			</tr>
+		</table><hr>
+		<span th:if="${not cart.isEmpty()}">
+			<div th:each="user : ${User}" th:if="${user?.getUsername().equals(selectedUser?.getUsername())}">
+<!-- 				<a  th:href="@{/cart/pay}" ></a><br> -->
+<!-- 				<a th:text="#{shop.cash}" th:href="@{/cart/payCash}"></a> -->
+
+				<form method="post" role="form" id="form" th:action="@{/shop/pay}" th:object="${form}">
+					<input type="hidden" name="payment" id="payment" value="balance"/>
+					<button type="submit" class="Shopbuttons" th:text="#{shop.pay}">Balance</button>
+				</form>
+				
+				<form method="post" role="form" id="form" th:action="@{/shop/pay}" th:object="${form}">
+					<input type="hidden" name="payment" id="payment" value="cash"/>
+					<button type="submit" class="Shopbuttons" th:text="#{shop.cash}">Balance</button>
+				</form>
+			</div>
+			<span th:if="${selectedUser == null OR User.isEmpty()}">
+				<span th:text="#{shop.paySelectUser}"></span><br>
+			</span>
+		</span>
+		<span th:if="${cart.isEmpty()}" th:text="#{shop.cartEmpty}"> </span>
+	</div>
+
+	<div class="currentuseres shoptags">
+		<header th:text="#{shop.currentusers}">Current Users</header>
+		<hr>
+		<span th:if="${#lists.isEmpty(User)}" th:text="#{shop.noCurrentUsers}"></span>
+		<form method="post" role="form" id="form" th:action="@{/shop/selectUser}" th:object="${form}" th:each="user : ${User}">
+			<input type="hidden" name="sessionUser" id="sessionUser" th:value="${user.id}"/>
+			<button type="submit" class="Shopbuttons" th:text="${user.getFirstname()}+' '+${user.getLastname()}" th:id="''+${user?.getUsername().equals(selectedUser?.getUsername()) ? 'selectedUser' : ''}" >Max Mustermann</button>
+		</form>
+	</div>
+
+
+	<!-- footer Navigation -->
+	<nav th:include="footerNav :: footerNav"></nav>
+</body>
+</html>

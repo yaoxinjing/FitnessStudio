@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/shop.css}" rel="stylesheet"
+        href="../static/resources/css/shop.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{verwaltung.title}">Fitnessstudio</title>
+    </head>
+    <body>
+      <nav th:include="navigation :: navigation"></nav>
+      
+
+    	<article class="mainelement" id="smallmainelement">
+        <header>Product In Stock</header>
+        <hr>
+    		<div th:each="stock : ${Stock}">
+    			<form method="post" role="form" id="form" th:action="@{/stock/change}" th:object="${form}">
+    				<button class="verwbuttonsColored" id="verwbuttonsMed" type="submit" th:text="${stock.getProduct().getName()}"></button>
+    				<input class="stockInput" name="amount" id="amount"  type="text" th:value="${stock.getQuantity().getAmount().floatValue()}"/>
+    				<input class="stockInput" name="InventoryId" id="InventoryId"  type="hidden" th:value="${stock.getId()}"/>
+    			</form>
+    		</div>
+    	</article>
+    
+
+
+      <!-- footer Navigation -->
+      <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

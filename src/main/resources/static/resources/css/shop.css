@@ -1,0 +1,182 @@
+.commoditydiv {
+	position: relative;
+  float: left;
+  padding: 2%;
+  box-sizing: border-box;
+  clear: both;
+  text-align: left;
+}
+
+
+.commodity {
+	border-radius: 10%;
+  float: left;
+  width: auto;
+  background: #BDBDBD;
+  box-sizing: border-box;
+  border: 1px solid;
+  text-align: center;
+  margin: 1%;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.commodity span {
+  z-index: 3;
+  font-size: 1vw;
+  line-height: normal;
+  padding: 0.5vw 0vw;
+}
+
+.commodityImage {
+	object-fit: cover;
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  background-position: center;
+  z-index: 2;
+}
+
+.showCommoditys {
+     float: left;
+     width: 60%;
+     min-width: 200px;
+     padding: 20px;
+     box-sizing: border-box;
+     border: 1px solid;
+     
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1BA157;
+  border-radius: 0 0 10% 10%;
+}
+
+.commodityImage:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 1vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.shoptags {
+  top: 8%;
+  opacity: 0.9;
+  z-index: 2;
+  border-color: #424242;
+  border-radius: 10px;  
+  border-style: solid;
+  text-align: center;
+  font-size: 0.8vw;
+}
+
+.shoptags header {
+  font-size: 2.5vw;
+  padding: 1%;
+}
+
+
+/* hauptelement */
+.shopelement {
+  width: auto;
+  height: auto;
+  margin-left: 1%;
+  margin-right: 42%;
+  margin-bottom: 25px;
+  margin-top: 0%;
+  position: relative;
+  float: left;
+  background-color:#A4A4A4;
+  padding: 15px 10px 10px 10px;
+  overflow: hidden;
+}
+
+.cart {
+  position: fixed;
+  width: 20%;
+  left: 60%;
+  padding: 1%;
+  border: 1px solid;
+  background-color:#A4A4A4;
+}
+
+.cart th,td {
+  font-size: 1vw;
+  width: 1%;
+}
+
+
+.carttablerow {
+  width: auto;
+  padding: 1%;
+  
+}
+
+.currentuseres a {
+    font-size: 2vw;
+    color: black;
+    margin: 3%;
+    padding: 3%;
+    line-height: 200%;
+}
+
+.currentuseres {
+  padding: 1%;
+  position: fixed;
+  left: 82%;
+  width: 16%;
+  border: 1px solid;
+  background-color:#A4A4A4;
+  overflow: hidden;
+}
+
+
+
+
+
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+.Shopbuttons {
+  background-color: #424242;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2vw;
+  padding: 5px 10px;
+  margin: 1px;
+  width: 11vw;
+}
+
+.Shopbuttons:hover {
+  background-color: #1BA157;
+}
+
+#selectedUser{
+  color: rgb(255, 70, 70);
+}

@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+    <nav th:fragment="navigation">
+        	<div id="brpic"></div>
+
+       	 <!--Obere Navigationsleiste-->
+        	<div class="navigationbar">
+           	<!-- Mittlerer Text -->   
+            	<div class="navigationbar-centered">
+              	<p th:text="#{navigation.caption}">Fitnessstudio.de</p>
+            	</div>
+          
+				<!-- Links orientierte Elemente -->
+				<div id="navigationbar-left">
+					<a href="index.html" th:href="@{/index}" th:text="#{navigation.start}">Start</a>
+					<a href="infos.html" th:href="@{/infos}" th:text="#{navigation.infos}">Infos</a>
+					<a href="bilder.html" th:href="@{/bilder}" th:text="#{navigation.bilder}">Bilder</a>
+					<a href="accountOverview.html" sec:authorize="isAuthenticated()" th:href="@{/accountOverview}" th:text="#{navigation.management}">Verwaltung</a>
+					<a href="shop.html" sec:authorize="hasAnyRole('EMPLOYEE','BOSS')" th:href="@{/shop}">Shop</a>
+				</div>
+          
+            	<!-- Rechts orientierte Elemente -->
+            	<div id="navigationbar-right">
+              		<a th:href="@{/login}" sec:authorize="!isAuthenticated()" th:text="#{navigation.login}">Login</a>
+              		<k sec:authorize="isAuthenticated()" th:text="#{navigation.welcome} + ${#request.userPrincipal.principal.getUsername()}"></k>
+                	<a id="navigationbar-rightSpace" th:href="@{/logoutState}" th:text="#{navigation.logout}" sec:authorize="isAuthenticated()">Logout</a>
+              		<a id="navigationbar-rightSpace" href="register.html" th:href="@{/register}" sec:authorize="!isAuthenticated()" th:text="#{navigation.register}">Registrieren</a>
+           	 	</div>
+			</div>
+		</nav>
+    </body>
+</html>

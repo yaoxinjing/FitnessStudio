@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+    href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/commodity.css}" rel="stylesheet"
+          href="../static/resources/css/commodity.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+    href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+	href="../static/resources/css/navigationbar.css" type="text/css"/>
+	<link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+    <meta charset="utf-8">
+    <title th:text="#{commodity.title}">Fitnessstudio</title>
+</head>
+<body>
+    <div id="brpic"></div>
+	<nav th:include="navigation :: navigation"></nav>
+	<br>
+
+
+	<article class="mainelement" id="smallmainelement">		
+		<form method="post" role="form" id="form" th:action="@{/catalog/editCommodity/}" th:object="${form}">
+			<header th:text="${commodity.name}">Produktbezeichnung</header>
+			<hr>
+
+
+			<table class="bigtable">
+				<tr>
+					<td id="btelement">
+						<img class="commodityImage"><img th:src="${'/resources/bilder/'+commodity.getName()+'.jpg'}" 
+							onerror="this.onerror=null; this.src='/resources/bilder/equipment_default.jpg'"
+						 class="image">
+
+					</td>
+					<td id="btelement">
+						<input type="hidden" id="commodity" name="commodity" th:value="${commodity.id}">
+						
+						<h3 th:text="#{commodity.name}">Name</h3>
+						<input class="text" name="name" id="name" type="text" th:value="${commodity.getName()}"/>
+						
+						<h3 th:text="#{commodity.description}">Beschreibung</h3>
+						<input class="text" name="description" id="description"  type="text" th:value="${commodity.getDescription()}"/>
+						
+						<h3 th:text="#{commodity.price}">Preis</h3>
+						<input class="text" name="price" id="price" type="number" min="0" step="0.01" th:value="${commodity.getGrossPrice().getNumber()}"/>
+						
+						<h3 th:text="#{commodity.discount}">Rabatt</h3>
+						<input class="text" name="discount" id="discount" pattern="[^-]+" th:value="${commodity.getDiscount()}"/>
+						
+						<h3 th:text="#{commodity.minAmount}">Mindestanzahl</h3>
+						<input class="text" name="minAmount" id="minAmount" type="number" min="0" step="1" th:value="${commodity.getMinCount()}"/>
+						
+						<h3 th:text="#{commodity.mhb}" th:if="${commodity?.getType().toString() == 'SUPPLEMENT'}">Type</h3>
+						<input class="text" name="mhb" id="mhb" type="date" th:if="${commodity?.getType().toString() == 'SUPPLEMENT'}" th:value="${mhb}"/>
+						<input class="text" name="mhb" id="mhb" type="hidden" th:if="${commodity?.getType().toString() != 'SUPPLEMENT'}" th:value="${mhb}"/>
+						
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<button type="submit" class="verwbuttonsColored" id="verwbuttonsSmall">Übernehmen</button>
+			
+	
+
+			
+		</form>
+ 	</article>	
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+.content{
+    text-align:center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+
+}
+
+body {
+    /*background: url(https://images.unsplash.com/photo-1600506638874-6011b1e10533?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80://images.unsplash.com/photo-1600701603137-4e6b69f0a82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=665&q=80) no-repeat center center fixed; */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+
+    background: url(https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat center center fixed;
+
+
+    background-size: cover;
+    background-position:center;
+  }
+
+hr{
+    width: 30%;
+}

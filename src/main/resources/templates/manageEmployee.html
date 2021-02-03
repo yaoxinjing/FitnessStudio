@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{manageEmployees.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Verwaltungs-Navigationsleiste -->
+        <nav th:include="manageNavigation :: manageNavigation"></nav>
+
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{manageEmployee.allEmployee}">Alle Mitarbeiter</header>
+            <hr>
+            <table class="bigtable">
+                <thead>
+                    <tr>
+                        <th th:text="#{manageEmployee.member}" id="btelement">Mitarbeiter</th>
+                        <th th:text="#{manageEmployee.tasks}" id="btelement">Aufgaben</th>
+                        <th th:text="#{manageEmployee.salary}" id="btelement">Gehalt</th>
+                        <th th:text="#{manageEmployee.options}" id="btelement">Funktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each=" user : ${userList}">
+                        
+                            <td>
+                                <a th:text="${user.fullname}", th:href="@{/manageProfile/{id}(id=${user.id})}">
+                                    x
+                                </a>
+                            </td>
+                        <td id="btelement">Gammeln</td>                 
+                        <td th:text="${user.salary}">2000€</td>
+                        <td> <a  th:href="@{/user/remove/{id}(id=${user.id})}"><span style="color: red;">&#10006;</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <!-- Hinzufügen -->
+        <article class="rightsinglemainelement">
+            <header><a th:href="@{/registerEmployee}" style="color: black;">+</a></header>
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

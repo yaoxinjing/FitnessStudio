@@ -1,0 +1,58 @@
+= Protokoll Gruppe 03
+
+Treffen am 03.12.2020
+
+Ort:      Discord +
+Beginn:   11:10 Uhr +
+Ende:     11:30 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+17.12.2020, 11:10 Uhr, Discord
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Entwicklerdocu (bis Endpäsentation)
+* Entwurfsdiagramm
+* Testfälle
+** CI Build zur Überprüfung ob compilierbar
+** Testabdeckung und Coding-Rules über SonarQube überprüfen (nur aus TU-VPN)
+
+== Retrospektive des letzten Sprints
+Prototyp fertiggestellt
+
+|===
+|Aufgabe |Status |Bemerkung
+|User     |fertiggestellt |
+|Manager     |fertiggestellt |
+|Requests     |fertiggestellt |
+|Employee     |fertiggestellt |
+|Shop     |fertiggestellt |
+|Fitnessstudio    |fertiggestellt |  
+|===
+
+
+== Planung des nächsten Sprints
+Muss-Kriterien abschließen
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|Mitglieder und Mitarbeiter |Verwaltung der Mitglieder und Mitarbeiter |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Shop     |Transaktionen im Shop umsetzen, Interface zum Produkte erstellen |Sebastian                |in Bearbeitung
+|User     |Ausbau des Users |Yaoxin                |in Bearbeitung
+|Frontend |Frontend überarbeiten |Nils |in Bearbeitung
+|===

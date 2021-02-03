@@ -1,0 +1,47 @@
+= Protokoll Gruppe 03
+
+Treffen am 12.11.2020
+
+Ort:      BBB +
+Beginn:   11:10 Uhr +
+Ende:     12:00 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+19.11.2020, 11:10 Uhr, BBB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Protokoll ausführlicher gestalten
+* Besprechung von Fragen zu Videoshop
+* Kann- und Muss-Kriterien des Pflichtenhefts ausformulieren und als Tabelle
+* Nicht-funktionale Kriterien nach ISO-Standard
+* Ausblick auf Aufgabe ab 15.11. (jeweils: Feature grundlegend implementieren, Entwurfsdiagramm entwerfen, Unterteilung in zwei Klassendiagramme)
+* GitHub-Issues als To-Do-Liste
+
+== Retrospektive des letzten Sprints
+Videoshop und Grundlagen für Pflichtenheft wurde angefangen zu bearbeiten. Das UML-Diagramm wurde annähernd abgeschlossen.
+
+|===
+|Aufgabe |Status |Bemerkung
+|Bewertungen     |in Bearbeitung ~50% fertig |Fehler wird im Backend abgefangen, Feedback and den User noch in Arbeit
+|Kategorien     |Fertiggestellt |
+|Bestellungen     |in Bearbeitung |
+|PDF     |in Bearbeitung |Auslesen des Cart-Inhalts problematisch
+|Rabatte     |in Bearbeitung ~90% fertig |
+|Registrierung     |Fertiggestellt |
+|===
+
+== Planung des nächsten Sprints
+Verbleibende Aufgaben zum Videoshop erledigen

@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{request.addTrainingRequest.title}">Add Training Request</title>
+    </head>
+
+    <body>
+       <!-- Haupt-Navigationsleiste -->
+       <nav th:include="navigation :: navigation"></nav>
+
+       <!-- Verwaltungs-Navigationsleiste -->
+       <nav th:include="manageNavigation :: manageNavigation"></nav>
+        
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{request.addTrainingRequest.caption}">Add Training Request</header>
+            <hr>
+            <form method="post" role="form" class="ui form" id="form" th:action="@{/manageRequest/addTrainingRequest}" th:object="${form}">                     
+                <div class="field">
+                    <label for="date" th:text="#{request.addTrainingRequest.date}">Date</label>
+                    <input id="date" th:field="*{date}" th:errorclass="fieldError" type="date" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}" th:text="#{request.addTrainingRequest.dateError}">
+                    The field for date should not be empty.</p>
+                </div>  
+                <div class="field">
+                    <label for="time" th:text="#{request.addTrainingRequest.time}">Time</label>
+                    <input id="time" th:field="*{time}" th:errorclass="fieldError" type="time" step="900" min="06:00" max="18:00" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('time')}" th:errors="*{time}" th:text="#{request.addTrainingRequest.timeError}">
+                    The field for time should not be empty.</p>
+                </div>
+                <div class="field">
+                	<label for="employee" th:text="#{request.addTrainingRequest.employee}">Employee</label>
+                	<select id="employee" th:field="*{employee}" required="required">
+                    	<option th:each="employee : ${employees}" th:value="${employee}" th:text="${employee}"/>
+                	</select>        
+                </div>                        
+                <button type="submit" class="verwbuttonscolored" id="verwbuttonsSmall" th:text="#{button.submit}">Submit</button>
+            </form>           
+        </article>
+    </body>
+</html>

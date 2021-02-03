@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>  
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{infos.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <div id="brpic"></div>
+
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Öffnungszeiten -->
+        <article class="mainelement">
+            <header th:text="#{infos.openingHours}">Unsere Öffnungszeiten</header>
+            <hr>
+            <table class="bigtable">
+                <tbody>
+                    <tr><td th:text="#{manageStudio.monday}" id="tablelefttextalign">Montag</td><td th:text="${dates.monday.openingTime}">8</td><td>-</td><td th:text="${dates.monday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.tuesday}" id="tablelefttextalign">Dienstag</td><td th:text="${dates.tuesday.openingTime}">8</td><td>-</td><td th:text="${dates.tuesday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.wednesday}" id="tablelefttextalign">Mittwoch</td><td th:text="${dates.wednesday.openingTime}">8</td><td>-</td><td th:text="${dates.wednesday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.thursday}" id="tablelefttextalign">Donnerstag</td><td th:text="${dates.thursday.openingTime}">8</td><td>-</td><td th:text="${dates.thursday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.friday}" id="tablelefttextalign">Freitag</td><td th:text="${dates.friday.openingTime}">8</td><td>-</td><td th:text="${dates.friday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.saturday}" id="tablelefttextalign">Samstag</td><td th:text="${dates.saturday.openingTime}">8</td><td>-</td><td th:text="${dates.saturday.closeTime}">19</td><td>Uhr</td></tr>
+                    <tr><td th:text="#{manageStudio.sunday}" id="tablelefttextalign">Sonntag</td><td th:text="${dates.sunday.openingTime}">8</td><td>-</td><td th:text="${dates.sunday.closeTime}">19</td><td>Uhr</td></tr>
+                </tbody>    
+            </table>
+        </article>
+
+        <!-- Anfahrt -->
+        <article class="mainelement">
+            <header th:text="#{infos.visitUs}">Besuchen sie uns!</header>
+            <hr>
+            <iframe class="maps" src=https://maps.google.de/maps?hl=de&q=Fit%20%20Wundtstraße+7%20Dresden&t=&z=10&ie=utf8&iwloc=b&output=embed></iframe>
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

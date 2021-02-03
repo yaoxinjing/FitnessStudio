@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{request.editVacationRequest.title}">Edit Vacation Request</title>
+    </head>
+
+    <body>
+       <!-- Haupt-Navigationsleiste -->
+       <nav th:include="navigation :: navigation"></nav>
+
+       <!-- Verwaltungs-Navigationsleiste -->
+       <nav th:include="manageNavigation :: manageNavigation"></nav>
+        
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{request.editVacationRequest.caption}">Edit Vacation Request</header>
+            <hr>
+            <form method="post" role="form" class="ui form" id="form" th:action="@{/manageRequest/editVacationRequest/{id}(id=${id})}" th:object="${form}">                     
+                <div class="field">
+                    <label for="beginning" th:text="#{request.addVacationRequest.beginning}">Beginning</label>
+                    <input id="beginning" name="beginning" th:field="*{beginning}" th:errorclass="fieldError" type="date" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('beginning')}" th:errors="*{beginning}" th:text="#{request.addVacationRequest.beginningError}">
+                    The field for beginning should not be empty.</p>
+                </div>
+                <div class="field">
+                    <label for="end" th:text="#{request.addVacationRequest.end}">End</label>
+                    <input id="end" name="end" th:field="*{end}" th:errorclass="fieldError" type="date" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('end')}" th:errors="*{end}" th:text="#{request.addVacationRequest.endError}">
+                    The field for end should not be empty.</p>
+                </div>
+                <div class="field">
+                    <label for="reason" th:text="#{request.addVacationRequest.reason}">Reason</label>
+                    <input id="reason" name="reason" th:field="*{reason}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('reason')}" th:errors="*{reason}" th:text="#{request.addVacationRequest.reasonError}">
+                    The field for reason should not be empty.</p>
+                </div>                                                                            
+                <button type="submit" class="verwbuttonsColored" id="verwbuttonsSmall" th:text="#{button.save}">Save</button>
+            </form>           
+        </article>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+= Protokoll Gruppe 03
+
+Treffen am 21.01.2021
+
+Ort:      Discord +
+Beginn:   11:10 Uhr +
+Ende:     11:30 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+28.01.2021, 11:10 Uhr, Discord
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Feedback aus Cross-Testing umsetzen
+* kleinere Probleme beheben
+* Entwicklerdoku
+* Testplan
+** Was wurde und wird noch getestet?
+* Präsentation
+** Evaluation ausfüllen
+* JavaDoc schreiben
+** erklärungsbedürftige Stellen erklären
+
+== Retrospektive des letzten Sprints
+Test-Coverage auf 40% gebracht 
+
+|===
+|Aufgabe |Status |Bemerkung
+|StudioUser     |abgeschlossen |
+|Manager     |abgeschlossen |
+|Requests     |abgeschlossen |
+|Shop     |abgeschlossen |
+|Fitnessstudio     |abgeschlossen |
+|Frontend    |abgeschlossen |  
+|===
+
+== Planung des nächsten Sprints
+Feedback aus Cross-Testing umsetzen, kleinere Probleme beheben, Entwicklerdoku, Testplan
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|StudioUser |Verwaltung der Mitglieder und Mitarbeiter |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Shop     |Verkauf von Produkten im Shop |Sebastian                |in Bearbeitung
+|Fitnessstudio     |allgemeines Programm und Einstellungen |Yaoxin                |in Bearbeitung
+|Frontend, kleinere Fixes |Frontend überarbeiten |Nils |in Bearbeitung
+|===

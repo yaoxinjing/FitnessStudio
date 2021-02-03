@@ -1,0 +1,124 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en"s>
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{accountOverview.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+
+       <!-- Haupt-Navigationsleiste -->
+       <nav th:include="navigation :: navigation"></nav>
+
+       <!-- Verwaltungs-Navigationsleiste -->
+       <nav th:include="manageNavigation :: manageNavigation"></nav>
+
+        <!-- Besuche -->
+       <article class="mainelement" id="rightsidedmainelement">
+           <header th:text="#{accountOverview.userStatistics}">User Statistik</header>
+           <hr>
+           <table class="bigtable">
+               <tbody>
+               <tr><td id="tablelefttextalign" th:text="#{accountOverview.trainingTime}">Total Training Time</td><td th:text="${totalTrainingTime}">8</td><td>Min</td></tr>
+               <tr><td id="tablelefttextalign" th:text="#{accountOverview.visitingCount}">Visiting Time</td><td th:text="${getVisitingCount}">8</td><td>Count</td></tr>
+               <tr><td id="tablelefttextalign" th:text="#{accountOverview.spentMoney}">Spend Money this month</td><td th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(moneySpendInThisMonth)}">8</td><td></td></tr>
+               <tr><td id="tablelefttextalign" th:text="#{accountOverview.userBalance}">User Balance</td><td th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(balance)}">8</td><td></td></tr>
+               </tbody>
+           </table>
+       </article>
+
+	   <!-- Neuwerbungsprämie -->
+       <article th:if="${BonusIsSet}=='false'" class="mainelement" id="rightsidedmainelement">
+           <header th:text="#{accountOverview.affiliateBonus}">Affiliate Bonus</header>
+               <div th:if="${userNameFalsh}=='true'" class="alert alert-danger" role="alert">
+                   Geben Sie bitte den richtigen Usernamen ein.
+               </div>
+               <hr>
+               <form th:action="@{/accountOverview/affiliateBonus}" th:method="post" class="ui form" id="form">
+                   <div class="field">
+                   	   <label for="userName" th:text="#{accountOverview.username}">Username</label>
+                   	   <input name="userName" type="text" th:name="userName">
+                   </div>                                    
+                   <button class="verwbuttonsColored" id="verwbuttonsSmall" type="submit" th:text="#{button.submit}">Submit</button>
+               </form>
+       </article>
+
+        <!-- Vertragsdetails -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{accountOverview.contractDetails}">Details zu ihrem Vertrag</header>
+            <hr>
+            <table class="bigtable">
+            <tr>
+                <td id="tablelefttextalign" th:text="#{accountOverview.contractDescription}">Beschreibung:</td>
+                <td id="btelement" th:text="${contract.getDescription()}"></td>
+            </tr>
+            <tr>
+                <td id="tablelefttextalign" th:text="#{accountOverview.contractStart}">Vertrag aktiv seit:</td>
+                <td id="btelement" th:text="${contract.startTimeString()}"></td>
+            </tr>
+            <tr>
+                <td id="tablelefttextalign" th:text="#{accountOverview.contractEnd}">Vertrag läuft aus am:</td>
+                <td id="btelement" th:text="${contract.endTimeString()}"></td>
+            </tr>
+            <tr>
+                <td id="tablelefttextalign" th:text="#{accountOverview.monthlyCosts}">monatliche Kosten:</td>
+                <td id="btelement" th:text="${contract.getPrice().toString()}"></td>
+            </tr>
+            </table>
+        </article>
+
+
+         <!-- Transaktionen -->
+         <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{accountOverview.transactionsTM}">Ihre Transaktionen diesen Monat</header>
+            <hr>
+            <table class="bigtable overview">
+                <thead>
+                    <tr>
+                        <th th:text="#{accountOverview.date}" id="btelement">Datum</th>
+                        <th th:text="#{accountOverview.all}" id="btelement">Gesamtpreis</th>
+                        <th th:text="#{accountOverview.product}" id="btelement">Produkt</th>
+                        <th th:text="#{accountOverview.price}" id="btelement">Preis</th>
+                        <th th:text="#{accountOverview.amount}" id="btelement">Anzahl</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="order : ${orderListMonth}">
+                    	<td id="btelement" th:text="${order.getDateCreated().toLocalDate()}"></td>
+                    	<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(order.getTotal())}"></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${orderLine.getProductName()} + '&lt;br /&gt;'"></span></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${T(fitnessStudio.catalog.Commodity).MoneySymbol(orderLine.getPrice())} + '&lt;br /&gt;'"></span></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${orderLine.getQuantity()} + '&lt;br /&gt;'"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+
+        <!-- Downloads -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{accountOverview.downloads}">Downloads</header>
+            <hr>
+            <div sec:authorize="hasRole('EMPLOYEE')">
+                <form method="post" th:action="@{/downloadGC}">
+                    <button th:text="#{accountOverview.paycheck}" class="verwbuttonsColored" id="verwbuttonsBig" type="submit">Gehaltscheck.pdf</button>
+                </form>
+            </div>
+            <form method="post" th:action="@{/downloadTA}">
+                <button th:text="#{accountOverview.transactions}" class="verwbuttonsColored" id="verwbuttonsBig" type="submit">Transaktionen.pdf</button>
+            </form>
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

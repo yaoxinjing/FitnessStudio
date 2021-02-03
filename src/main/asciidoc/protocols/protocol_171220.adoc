@@ -1,0 +1,53 @@
+= Protokoll Gruppe 03
+
+Treffen am 17.12.2020
+
+Ort:      Discord +
+Beginn:   11:10 Uhr +
+Ende:     11:20 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+07.01.2021, 11:10 Uhr, Discord
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* keine Neuerungen
+
+== Retrospektive des letzten Sprints
+Arbeiten an Basis-Funktionalität gestartet
+
+|===
+|Aufgabe |Status |Bemerkung
+|User     |in Bearbeitung |
+|Manager     |in Bearbeitung |
+|Requests     |in Bearbeitung |
+|Employee     |in Bearbeitung |
+|Shop     |in Bearbeitung |
+|Fitnessstudio    |in Bearbeitung |  
+|===
+
+== Planung des nächsten Sprints
+Muss-Kriterien abschließen
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|Mitglieder und Mitarbeiter |Verwaltung der Mitglieder und Mitarbeiter |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Shop     |Transaktionen im Shop umsetzen, Interface zum Produkte erstellen |Sebastian                |in Bearbeitung
+|User     |Ausbau des Users |Yaoxin                |in Bearbeitung
+|Frontend |Frontend überarbeiten |Nils |in Bearbeitung
+|===

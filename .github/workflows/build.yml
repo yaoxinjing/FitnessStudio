@@ -1,0 +1,36 @@
+# This file is managed by the ST lab crew, please don't change it!
+
+name: CI build
+
+on: push
+
+env:
+  MAVEN_OPTS: -Xmx1G
+
+jobs:
+  build:
+    name: Build and test
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Print version information
+      run: |
+        java -version
+        javac --version
+        git --version
+
+    - name: Checkout sources
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Build with Maven
+      run: ./mvnw clean package -DskipTests -Pci -B
+
+    - name: Test with Maven
+      run: ./mvnw verify -Pci -B
+
+    - name: Run and publish SonarQube analysis
+      if: github.ref == 'refs/heads/main'
+      run: ./mvnw sonar:sonar -B

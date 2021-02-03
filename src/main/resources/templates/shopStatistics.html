@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<!----> 
+	<link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+		href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+		href="../static/resources/css/navigationbar.css" type="text/css"/>
+	<link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+		href="../static/resources/css/verwaltung.css" type="text/css"/>
+	<link th:href="@{/resources/css/statistics.css}" rel="stylesheet"
+		href="../static/resources/css/statistics.css" type="text/css"/>
+	<link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+--> 
+    <title th:text="#{shopStatistics.title}">Statistiken</title>
+	</head>
+
+	<body>
+	<!-- Haupt-Navigationsleiste -->
+	<nav th:include="navigation :: navigation"></nav>
+
+	<!-- Verwaltungs-Navigationsleiste -->
+	<nav th:include="manageNavigation :: manageNavigation"></nav>
+	
+	<!-- Diagramm für verkaufte Produkte -->
+    <script th:inline="javascript">
+        var real_data = /*[[${PieChartData}]]*/'noValue';
+
+        $(document).ready(function() {
+            google.charts.load('current', {
+                packages : [ 'corechart', 'bar' ]
+            });
+            google.charts.setOnLoadCallback(drawPieChart);
+        });
+
+        function drawPieChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Commodity');
+            data.addColumn('number', 'Amount');
+            Object.keys(real_data).forEach(function(key) {
+                data.addRow([ key, real_data[key] ]);
+            });
+            var options = {
+                title : 'Verkaufte Produkte',
+                is3D: true,
+                backgroundColor: 'transparent'
+            };
+            var chart = new google.visualization.PieChart(document
+                    .getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+    
+    <div class="mainelement" id="rightsidedmainelementNOP">
+    	<header th:text="#{shopStatistics.soldProducts}">Umsatz</header>
+		<hr>
+        <div id="chart_div"></div>
+        <div id="piechart" style="width: 900px; height: 600px;"></div>
+	</div>
+    
+    <!-- Meist gekaufte Produkte -->
+    <!--
+	<div class="mainelement" id="rightsidedmainelement">
+		<div >
+			<header th:text="#{shopStatistics.mostbuyed}">Meist gekaufte Produkte</header>
+			<hr>
+			<table class="bigtable">
+				<tr>
+					<th id="btelement" th:text="#{shopStatistics.product}">Produkt</th>
+				</tr>
+				<tr th:each="mostWantedProd : ${MostWantedProducts}">
+					<td id="btelement" th:text="${mostWantedProd}"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	-->
+	
+	<!-- Umsatz -->
+	<div class="mainelement" id="rightsidedmainelement">
+		<div >
+			<header th:text="#{shopStatistics.sales}">Umsatz</header>
+			<hr>
+			<h1 th:text="#{shopStatistics.salesDaily}"> </h1>
+			<table class="bigtable">
+				<tr>
+					<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(DailySales)}"></td>
+				</tr>
+			</table>
+			<h1 th:text="#{shopStatistics.salesMonthly}"> </h1>
+			<table class="bigtable">
+				<tr>
+					<td th:text="#{shopStatistics.monthlySales}">Mitgliedsbeitrag</td>
+					<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(MonthlySales)}"></td>               	
+				</tr>
+				<tr>
+					<td th:text="#{shopStatistics.monthlyMembershipFees}">Mitgliedsbeitrag</td>
+					<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(MonthlyMembershipFees)}"></td>               	
+				</tr>
+				<tr>
+					<td th:text="#{shopStatistics.monthlyCosts}">Mitgliedsbeitrag</td>
+					<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(MonthlyCosts)}"></td>               	
+				</tr>
+				<tr>
+					<td th:text="#{shopStatistics.monthlyProfit}">Mitgliedsbeitrag</td>
+					<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(MonthlyProfit)}"></td>               	
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<!-- Alle Transaktionen -->
+	<div class="mainelement" id="rightsidedmainelement">
+		<div >
+			<header th:text="#{shopStatistics.allTransactions}">Alle Transaktionen</header>
+			<hr>
+			<table class ="bigtable table">
+				<tr>
+					<th th:text="#{accountOverview.date}" id="btelement">Datum</th>
+					<th th:text="#{accountOverview.all}" id="btelement">Gesamtpreis</th>
+					<th th:text="#{accountOverview.product}" id="btelement">Produkt</th>
+					<th th:text="#{accountOverview.price}" id="btelement">Preis</th>
+					<th th:text="#{accountOverview.amount}" id="btelement">Anzahl</th>
+				</tr>
+				<tr th:each="order : ${OrderList}">
+                    	<td id="btelement" th:text="${order.getDateCreated().toLocalDate()}"></td>
+                    	<td id="btelement" th:text="${T(fitnessStudio.catalog.Commodity).MoneySymbol(order.getTotal())}"></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${orderLine.getProductName()} + '&lt;br /&gt;'"></span></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${T(fitnessStudio.catalog.Commodity).MoneySymbol(orderLine.getPrice())} + '&lt;br /&gt;'"></span></td>
+                    	<td id="btelement"><span th:each="orderLine : ${order.getOrderLines()}" th:utext="${orderLine.getQuantity()} + '&lt;br /&gt;'"></span></td>
+                 </tr>
+			</table>
+		</div>
+	</div>
+
+	
+	<!-- footer Navigation -->
+	<nav th:include="footerNav :: footerNav"></nav>
+	
+</body>
+
+</html>

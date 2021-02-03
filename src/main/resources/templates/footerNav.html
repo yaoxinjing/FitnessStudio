@@ -1,0 +1,94 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+        href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+        href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <nav th:fragment="footerNav">
+    <article class="mainelementlast">
+        <!-- our team -->
+        <section>
+            <p th:text="#{footer.team}">Unser Trainerteam</p>
+            <hr>
+            <a>
+                Nils<br>
+                Basti<br>
+                Justus<br>
+                Yaoxin<br>
+                Alex<br>
+                Daniel<br>
+            </a>
+        </section>
+
+        <!-- Services -->
+        <section>
+            <p th:text="#{footer.services}">Services</p>
+            <hr>
+            <a th:text="#{footer.sauna}"> Sauna</a> <br>
+            <a th:text="#{footer.strengthTraining}"> Kraftsport</a> <br>
+            <a th:text="#{footer.fitness}"> Fitness</a> <br>
+            <a th:text="#{footer.rehabilitation}"> Rehabilitation</a> <br>
+            <a th:text="#{footer.kidsSport}"> Kindersport</a> <br>                              
+        </section>
+
+        <!-- information -->
+        <section>
+            <p th:text="#{footer.info}">informationen</p>
+            <hr>
+            <a>
+                <a href="newPictures.html" th:href="@{/bilder}" th:text="#{navigation.bilder}">Bilder</a><br>
+                <a href="infos.html" th:href="@{/infos}" th:text="#{footer.opening}">Öffnungszeiten</a><br>
+                <a href="infos.html" th:href="@{/infos}" th:text="#{footer.find}">Anfahrt</a><br>
+            </a>
+        </section>
+
+        <!-- Funktionen -->
+        <section>
+            <p th:text="#{footer.functions}">Funktionen</p>
+            <hr>
+            <a>
+                <!-- login -->
+                <div sec:authorize="!isAuthenticated()">
+                    <a th:href="@{/login}"  th:text="#{navigation.login}">Login</a>
+                    <br>        
+                </div>
+                <!-- logout -->
+                <div sec:authorize="isAuthenticated()">
+                    <a id="navigationbar-rightSpace" th:href="@{/logoutState}" th:text="#{navigation.logout}">Logout</a>
+                    <br>
+                </div>
+                <!-- register -->
+                <a id="navigationbar-rightSpace" href="register.html" th:href="@{/register}" sec:authorize="!isAuthenticated()" th:text="#{navigation.register}">Registrieren</a>
+            </a>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <p th:text="#{footer.contact}">Kontakt</p>
+            <hr>
+            <!-- phone -->
+            <div class="contactdrop">
+                <img th:src="${'/resources/bilder/phone.png'}">
+                <p class="footerOverlay">0151212737</p>
+            </div>
+            <!-- mail -->
+            <div class="contactdrop">
+                <img th:src="${'/resources/bilder/mail.png'}">
+                <p class="footerOverlay">contact@gym.de</p>
+            </div>
+        </section>
+
+
+    </article>    
+	</nav>
+    </body>
+</html>
+
+

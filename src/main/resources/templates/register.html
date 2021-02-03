@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+    href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+    href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+    href="../static/resources/css/navigationbar.css" type="text/css"/>
+    <meta charset="utf-8">
+    <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+    <title th:text="#{register.title}">Fitnessstudio</title>
+</head>
+<body>
+    <div id="brpic"></div>
+
+    <nav th:include="navigation :: navigation"></nav>
+
+
+    <article class="mainelement" id="smallmainelement">
+        <header th:text="#{register.caption}">Registrieren</header>
+        <p th:if="${showerror}" class="alert alert-danger" th:text="#{register.username.duplicate}"></p>
+        <form method="post" role="form" class="ui form" id="form" th:action="@{/register}" th:object="${form}">
+            <table>
+                <!-- Linke Seite -->
+                <tr>
+                    <td>
+                        <table><tr><td class="field">
+                                <label for="name" th:text="#{register.username}">Username</label>
+                                <input th:field="*{username}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+                                    <p>Der Userame darf nicht leer sein.</p>
+                                </div> 
+                            </td></tr><tr><td class="field">
+                                <label for="name" th:text="#{register.firstname}">Firstname</label>
+                                <input th:field="*{firstname}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">
+                                    <p>Der Firstname darf nicht leer sein.</p>
+                                </div>
+                            </td></tr><tr><td class="field">
+                                <label for="name" th:text="#{register.lastname}">Lastname</label>
+                                <input th:field="*{lastname}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                                <div class="ui negative message" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">
+                                    <p>Der Lastname darf nicht leer sein.</p>
+                                </div>
+                        </td></tr></table>
+                    </td>
+                    <!-- Rechte Seite -->
+                    <td>
+                        <img th:src="${'/resources/bilder/person.png'}">
+                    </td>
+                </tr>
+            </table>
+
+            <!-- second table among the split with picture-->
+            <table>
+                <tr>
+                    <td class="field">
+                        <label for="street" th:text="#{register.street}">Strasse</label>
+                        <input id="street" name="street" th:field="*{street}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('street')}" th:errors="*{street}">Die Adresse darf
+                            nicht leer sein.</p>
+                    </td>
+                    <td class="field">
+                        <label for="housenumber" th:text="#{register.housenumber}">Hausnummer</label>
+                        <input id="housenumber" name="address" th:field="*{housenumber}" th:errorclass="fieldError" type="number" min="1" max="9999" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('housenumber')}" th:errors="*{housenumber}">Die Adresse darf
+                            nicht leer sein.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field">
+                        <label for="addressaddition" th:text="#{register.housenumberaddition}">Adresszusatz</label>
+                        <input id="addressaddition" name="addressaddition" th:field="*{addressaddition}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('addressaddition')}" th:errors="*{addressaddition}">Die Adresse darf
+                            nicht leer sein.</p>
+                    </td>
+                    <td class="field">
+                        <label for="city" th:text="#{register.city}">Stadt</label>
+                        <input id="city" name="city" th:field="*{city}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('city')}" th:errors="*{city}">Die Adresse darf
+                            nicht leer sein.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field">
+                        <label for="postalcode" th:text="#{register.postcode}">PLZ</label>
+                        <input id="postalcode" name="postalcode" th:field="*{postalcode}" th:errorclass="fieldError" type="number" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('postalcode')}" th:errors="*{postalcode}">Die Adresse darf
+                            nicht leer sein.</p>
+                    </td>
+                    <td class="field">
+                        <label for="phonenumber" th:text="#{register.phonenumber}">Phonenumber</label>
+                        <input id="phonenumber" name="phonenumber" th:field="*{phonenumber}" th:errorclass="fieldError" type="tel" 
+                        required="required" pattern="[+]{0,1}+[3-9]{13}" placeholder="No whitespaces"/><br/>
+                        <p th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}">Die Telefonnummer darf
+                            nicht leer sein.</p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="field">
+                        <label for="email" th:text="#{register.email}">Email</label>
+                        <input id="email" name="email" th:field="*{email}" th:errorclass="fieldError" type="email" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Die Email darf
+                            nicht leer sein.</p>
+                    </td>
+                </tr><tr>
+                    <td class="field">
+                        <label for="password" th:text="#{register.password}">Passwort</label>
+                        <input id="password" name="password" th:field="*{password}" th:errorclass="fieldError" type="password" required="required"/><br/>
+                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Das Passwort darf
+                            nicht leer sein.</p>
+                    </td>
+                </tr>
+            </table> 
+            <hr>
+            <p>ACHTUNG: Durch eine Registrierung verpflichten sie
+                sich automatisch zu einer 6 Monatigen Vertragslaufzeit.
+            </p>           	                       
+            <hr>
+            <button type="submit" class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{register.register}">Registrieren</button>
+        </form>
+
+        <br>
+    </article>
+ 
+</body>
+</html>

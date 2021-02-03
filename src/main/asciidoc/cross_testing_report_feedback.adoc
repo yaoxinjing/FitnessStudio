@@ -1,0 +1,79 @@
+= Cross-Testing Feedback
+
+__Durchführende Gruppe:__ 04
+
+__Anwendung von Gruppe:__ 03
+
+== Getestetes System
+Welche Aufgabe/Problemstellung löst die Anwendung.
+
+== Fehler-Report
+// See http://asciidoctor.org/docs/user-manual/#tables
+[options="header"]
+|===
+|Pfad |Parameter |Beschreibung |Rückgabe
+
+| http://localhost:8080/register | - | Vertragslaufzeit ist globale Variable. Darf nicht individuell im Registrierungsformular gewählt werden | -
+
+| http://localhost:8080/register | - | Hausnummer darf nicht 0 sein | -
+
+| http://localhost:8080/register | - | Postleitzahl darf nur aus Ziffern bestehen | -
+
+| http://localhost:8080/register | - | Telefonnummer darf nur aus Ziffern und ggf. '+' bestehen | -
+
+| http://localhost:8080/registerEmployee | - | Hausnummer darf nicht 0 sein | -
+
+| http://localhost:8080/registerEmployee | - | Postleitzahl darf nur aus Ziffern bestehen | -
+
+| http://localhost:8080/registerEmployee | - | Gehalt muss Kommazahl sein, nicht Buchstaben| -
+
+| download Transaktionen.pdf | - | Mitgliedsbeitrag ist für jeden Monat 0 | -
+
+| download Transaktionen.pdf | - | nur Shop-Transaktionen aufgelistet. Mitgliedswerbung, Aufladung, Monatsbeitrag usw. fehlen | Benutzbarkeit
+
+| http://localhost:8080/accountOverview | Überweisungsbetrag | muss größer als 0 sein | Benutzbarkeit
+
+| http://localhost:8080/manageProfile | - | neu angemeldeter Nutzer klickt auf Link in /verwaltung auf den 'Profil'-Link | Whitelabel Error Page - Error resolving template [/manageProfile], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+| http://localhost:8080/manageProfile/{id} (gilt für jede ID) | - | angemeldeter Mitarbeiter kann nicht zugreifen auf Link aus "http://localhost:8080/manageMember" | Whitelabel Error Page - Error resolving template [/manageProfile], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+| http://localhost:8080/manageRequest | - | angemeldeter Nutzer sieht den Link 'Urlaubsantrag'-Link -> /addVacationRequest  | Whitelabel Error Page 
+
+| http://localhost:8080/manageRequest | - | angemeldeter Mitarbeiter sieht den Link 'Pausierungsantrag'-Link -> /addPauseRequest  | Whitelabel Error Page 
+
+| http://localhost:8080/manageRequest/addPauseRequest | 5, 05, Mai, May | Eingabe unklar - was gebe ich ins Textfeld ein - eine Zahl, den Monatsnamen? | Unklare Benutzbarkeit - Request processing failed; nested exception is java.time.format.DateTimeParseException: Text '5' could not be parsed at index 0 
+
+| http://localhost:8080/manageRequest/addPauseRequest | Datum | Aussetzdatum darf nicht in der Vergangenheit liegen | -
+
+| http://localhost:8080/manageRequest/addPauseRequest | - | Genehmigung könnte auch automatisiert passieren (1 Monat/Jahr) | -
+
+| http://localhost:8080/manageRequest/addVacationRequest | Anfangs-, Enddatum | Urlaub darf nicht in der Vergangenheit liegen | - 
+
+| http://localhost:8080/manageRequest/editVacationRequest/48 | - | Wenn ein Mitarbeiter den Aussetzantrag eines Mitglieds bearbeiten will -> Error | java.lang.ClassCastException: class fitnessStudio.request.PauseRequest cannot be cast to class fitnessStudio.request.VacationRequest
+
+| http://localhost:8080/manageRequest/editVacationRequest/25 | - | angemeldeter Mitarbeiter kann nicht zugreifen - Pause request 'edit' Knopf funktioniert nicht  | Whitelabel Error Page 
+
+| http://localhost:8080/manageStudio | - | Weitere Bearbeitungsmöglichkeiten - Neuwerbeprämie und  Laufzeit werden nicht angezeigt  | Benutzbarkeit 
+
+| http://localhost:8080/downloadGC | - | angemeldeter Boss - Gehaltscheck Button auf http://localhost:8080/accountOverview schmeißt Fehler | java.lang.NullPointerException: null
+
+| http://localhost:8080/stock | - | unangemeldet - /stock leitet nicht auf login weiter | Whitelabel Error Page 
+
+| http://localhost:8080/shopStatistics | - | unangemeldet ist die Seite aufrufbar, dass sollten vllt nur Mitarbeiter sehen ;) | -
+
+| http://localhost:8080/catalog/commodity/ad5b... | - | Preis, Mindestanzahl und Rabatt können auch negativ eingestellt werden | Bug
+
+| http://localhost:8080/shop | - | Guthaben des Nutzer, Lagerbestand des Produkts werden nicht angezeigt | Benutzbarkeit
+
+|===
+
+== Sonstiges
+* Interaktion mit der Anwendung (Usability) -> Eingabefelder/Interaktionsmöglichkeiten je nach Größe des Broswerfensters verschoben. Eingabefelder können deutlich zu klein erscheinen. Ansonsten schön gestaltete Seite :)
+* Wie funktioniert das Kundenwerbeprogramm? -> keine Möglichkeit bei der Registrierung auf eine Kundenwerbung zu verweisen
+* Checkin, Checkout (Eingangsbereich zur An- und Abmeldung im Studio) fehlt
+* Mitarbeiter sind anscheinend auch automatisch Mitglieder (Mitarbeiter haben z.B. User Statistik)
+* Im Shop müssten alle Mitglieder sichtbar sein, bzw. die die eingecheckt haben (momentan nur eingeloggte Mitglieder)
+
+== Verbesserungsvorschläge
+* Umlaute ersetzen
+* Bearbeitete Anträge -> Formatierung (viel zu klein)

@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_2lqZQGP1Eeu4zMb86T63zA" name="swt20w03">
+    <eAnnotations xmi:id="_2rEdsGP1Eeu4zMb86T63zA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_2rEdsWP1Eeu4zMb86T63zA" source="codegen">
+        <details xmi:id="_2rEdsmP1Eeu4zMb86T63zA" key="codegenDirectory" value="/swt20w03/src/main/java"/>
+        <details xmi:id="_20gGgGP1Eeu4zMb86T63zA" key="AssociatedSourceCode" value="/swt20w03/src/main/java/fitnessStudio/printToPDF/PDFController.java;2504667443/1;/swt20w03/src/main/java/fitnessStudio/printToPDF/PDFDocument.java;3661273504/1;/swt20w03/src/main/java/fitnessStudio/printToPDF/PDFNachbestellungsExporter.java;3764046243/1;/swt20w03/src/main/java/fitnessStudio/printToPDF/PDFPaycheckExporter.java;3820709139/1;/swt20w03/src/main/java/fitnessStudio/printToPDF/PDFTransactionsExporter.java;1865344548/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_2xAtoWP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtomP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAto2P1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtpGP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtpWP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtpmP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtp2P1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtqGP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_2xAtqWP1Eeu4zMb86T63zA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2w5_8GP1Eeu4zMb86T63zA" name="fitnessStudio">
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nE2P1Eeu4zMb86T63zA" name="catalog">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xkHQ2P1Eeu4zMb86T63zA" name="Commodity"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nFGP1Eeu4zMb86T63zA" name="inventory">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xkHRWP1Eeu4zMb86T63zA" name="InventoryManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nFWP1Eeu4zMb86T63zA" name="user">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xkHR2P1Eeu4zMb86T63zA" name="Employee"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_2xkHSWP1Eeu4zMb86T63zA" name="StudioUserRepository"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w71IGP1Eeu4zMb86T63zA" name="printToPDF">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xAGkGP1Eeu4zMb86T63zA" name="PDFController">
+          <ownedAttribute xmi:id="_2xzX0GP1Eeu4zMb86T63zA" name="dateFormatter" visibility="package" type="_2xiSEGP1Eeu4zMb86T63zA" association="_2x4QUGP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xzX0WP1Eeu4zMb86T63zA" value="new SimpleDateFormat(&quot;yyyy-MM-dd_HH:mm&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2xzX0mP1Eeu4zMb86T63zA" name="currentDateTime" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xzX02P1Eeu4zMb86T63zA" value="dateFormatter.format(new Date())"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2xzX1GP1Eeu4zMb86T63zA" name="orderManagement" visibility="private" isLeaf="true" type="_2xjgMWP1Eeu4zMb86T63zA" isReadOnly="true" association="_2x4QU2P1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2xzX1mP1Eeu4zMb86T63zA" name="studioUserRepository" visibility="private" isLeaf="true" type="_2xkHSWP1Eeu4zMb86T63zA" isReadOnly="true" association="_2x4QVmP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2xzX12P1Eeu4zMb86T63zA" name="inventoryManager" visibility="private" isLeaf="true" type="_2xkHRWP1Eeu4zMb86T63zA" isReadOnly="true" association="_2x4QWWP1Eeu4zMb86T63zA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x10GGP1Eeu4zMb86T63zA" name="PDFController" specification="_2xsDEGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x10GWP1Eeu4zMb86T63zA" name="orderManagement" type="_2xjgMWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x10GmP1Eeu4zMb86T63zA" name="studioUserRepository" type="_2xkHSWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x10G2P1Eeu4zMb86T63zA" name="inventoryManager" type="_2xkHRWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x10HGP1Eeu4zMb86T63zA" type="_2xAGkGP1Eeu4zMb86T63zA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>if ((orderManagement == null) || (studioUserRepository == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		this.orderManagement = orderManagement;&#xD;
+		this.studioUserRepository = studioUserRepository;&#xD;
+		this.inventoryManager = inventoryManager;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x10HWP1Eeu4zMb86T63zA" name="downloadGC" specification="_2xsqIGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x10HmP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x10H2P1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		// import content&#xD;
+		List&lt;Order> pdfContent = orderManagement.findBy(userAccount.get()).toList();&#xD;
+		// filename&#xD;
+		String headerVal = &quot;attachment; filename=Transaktionen_&quot; + currentDateTime + &quot;.pdf&quot;;&#xD;
+		// pdf erstellen&#xD;
+		exportTransactionsToPDF(response, pdfContent, headerVal, userAccount);&#xD;
+		</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bIGP1Eeu4zMb86T63zA" name="exportTransactionsToPDF" specification="_2xtRMGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bIWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bImP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bI2P1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2x2bJGP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((response == null) || (headerVal == null) || (pdfContent == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		String headerKey = &quot;Content-Disposition&quot;;&#xD;
+		String headerValue = headerVal;&#xD;
+		// filename&#xD;
+		response.setHeader(headerKey, headerValue);&#xD;
+		// create transactionsExporter object and call it using fields&#xD;
+		PDFTransactionsExporter exporter = new PDFTransactionsExporter(pdfContent, userAccount, studioUserRepository);&#xD;
+		exporter.export(response);&#xD;
+		</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bJWP1Eeu4zMb86T63zA" name="downloadTA" specification="_2xtROGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bJmP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bJ2P1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		Employee employee = (Employee) studioUserRepository.findByUserAccount(userAccount.get());&#xD;
+					&#xD;
+		// filename&#xD;
+		String headerVal = &quot;attachment; filename=Gehaltscheck_&quot; + currentDateTime + &quot;.pdf&quot;;&#xD;
+		exportPaycheckToPDF(response, headerVal, userAccount, employee);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bKGP1Eeu4zMb86T63zA" name="exportPaycheckToPDF" specification="_2xt4SGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bKWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bKmP1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2x2bK2P1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bLGP1Eeu4zMb86T63zA" name="employee" type="_2xkHR2P1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((response == null) || (headerVal == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		String headerKey = &quot;Content-Disposition&quot;;&#xD;
+		String headerValue = headerVal;&#xD;
+		// filename&#xD;
+		response.setHeader(headerKey, headerValue);		&#xD;
+		PDFPaycheckExporter exporter = new PDFPaycheckExporter(userAccount, employee);&#xD;
+		exporter.export(response);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bLWP1Eeu4zMb86T63zA" name="downloadNBL" specification="_2xufUWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bLmP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		// import content&#xD;
+		List&lt;String> pdfContent = new LinkedList&lt;String>(); &#xD;
+		List&lt;Commodity> overMHBContent = inventoryManager.OverMHB();&#xD;
+		Iterator&lt;?> iterator = inventoryManager.reOrderList().entrySet().iterator();&#xD;
+		// filename&#xD;
+		String headerVal = &quot;attachment; filename=Nachbestelliste&quot; + currentDateTime + &quot;.pdf&quot;;&#xD;
+		// pdf erstellen&#xD;
+		exportNachbestellungToPDF(response, pdfContent, headerVal, iterator, overMHBContent);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bL2P1Eeu4zMb86T63zA" name="exportNachbestellungToPDF" specification="_2xufWGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bMGP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bMWP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bMmP1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2x2bM2P1Eeu4zMb86T63zA" name="iterator" type="_2xi5IGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bNGP1Eeu4zMb86T63zA" name="overMHBContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((response == null) || (iterator == null) || (headerVal == null) || (pdfContent == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		String headerKey = &quot;Content-Disposition&quot;;&#xD;
+		String headerValue = headerVal;&#xD;
+		// filename&#xD;
+		response.setHeader(headerKey, headerValue);&#xD;
+		// export&#xD;
+		PDFNachbestellungsExporter exporter = new PDFNachbestellungsExporter(pdfContent, iterator, overMHBContent);&#xD;
+		exporter.export(response);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_2xsDEGP1Eeu4zMb86T63zA" name="PDFController" method="_2x10GGP1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xsDFGP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xsDFWP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xsDEWP1Eeu4zMb86T63zA" name="orderManagement" type="_2xjgMWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xsDEmP1Eeu4zMb86T63zA" name="studioUserRepository" type="_2xkHSWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xsDE2P1Eeu4zMb86T63zA" name="inventoryManager" type="_2xkHRWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xsDFmP1Eeu4zMb86T63zA" type="_2xAGkGP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xsqIGP1Eeu4zMb86T63zA" name="downloadGC" visibility="package" method="_2x10HWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xsqIWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xsqImP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xtRMGP1Eeu4zMb86T63zA" name="exportTransactionsToPDF" method="_2x2bIGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xtRMWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xtRMmP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xtRM2P1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2xtRNGP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xtROGP1Eeu4zMb86T63zA" name="downloadTA" visibility="package" method="_2x2bJWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xtROWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xtROmP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xt4SGP1Eeu4zMb86T63zA" name="exportPaycheckToPDF" method="_2x2bKGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xt4SWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xt4SmP1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2xt4S2P1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xt4TGP1Eeu4zMb86T63zA" name="employee" type="_2xkHR2P1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xufUWP1Eeu4zMb86T63zA" name="downloadNBL" visibility="package" method="_2x2bLWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xufUmP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xufWGP1Eeu4zMb86T63zA" name="exportNachbestellungToPDF" method="_2x2bL2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xufWWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xufWmP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xufW2P1Eeu4zMb86T63zA" name="headerVal">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2xufXGP1Eeu4zMb86T63zA" name="iterator" type="_2xi5IGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xufXWP1Eeu4zMb86T63zA" name="overMHBContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xCi0GP1Eeu4zMb86T63zA" name="PDFDocument">
+          <ownedAttribute xmi:id="_2xz-4GP1Eeu4zMb86T63zA" name="headFont" type="_2xl8c2P1Eeu4zMb86T63zA" association="_2x4QXGP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xz-4WP1Eeu4zMb86T63zA" value="FontFactory.getFont(FontFactory.HELVETICA)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2xz-42P1Eeu4zMb86T63zA" name="textFont" type="_2xl8c2P1Eeu4zMb86T63zA" association="_2x43YWP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xz-5GP1Eeu4zMb86T63zA" value="FontFactory.getFont(FontFactory.HELVETICA)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2xz-5mP1Eeu4zMb86T63zA" name="font" type="_2xl8c2P1Eeu4zMb86T63zA" association="_2x43ZGP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xz-52P1Eeu4zMb86T63zA" value="FontFactory.getFont(FontFactory.HELVETICA)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2xz-6WP1Eeu4zMb86T63zA" name="header" type="_2xl8d2P1Eeu4zMb86T63zA" association="_2x43Z2P1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2xz-62P1Eeu4zMb86T63zA" name="footer" type="_2xl8d2P1Eeu4zMb86T63zA" association="_2x43amP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2xz-7GP1Eeu4zMb86T63zA" value="new HeaderFooter(new Phrase(&quot;Seite &quot;), new Phrase(&quot;&quot;))"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2x0l8WP1Eeu4zMb86T63zA" name="document" type="_2xl8cWP1Eeu4zMb86T63zA" association="_2x43bWP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2x0l8mP1Eeu4zMb86T63zA" value="new Document(PageSize.A4)"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bNWP1Eeu4zMb86T63zA" name="PDFDocument" specification="_2xDJ4GP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bNmP1Eeu4zMb86T63zA" type="_2xCi0GP1Eeu4zMb86T63zA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>headFont.setColor(Color.black);&#xD;
+		headFont.setSize(30);&#xD;
+		textFont.setColor(Color.black);&#xD;
+		textFont.setSize(20);&#xD;
+		footer.setAlignment(2);&#xD;
+		font.setColor(Color.black);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bN2P1Eeu4zMb86T63zA" name="setHeader" specification="_2xDJ5GP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bOGP1Eeu4zMb86T63zA" name="title">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>header = new HeaderFooter(new Phrase(&quot;Fitnesstudio.de - &quot; + title), false);&#xD;
+		header.setAlignment(1);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bOWP1Eeu4zMb86T63zA" name="setPersonalInfo" specification="_2xvGYmP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bOmP1Eeu4zMb86T63zA" name="userAccount" type="_2xjgM2P1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>document.add(new Paragraph(&quot;Nutzername:   &quot; + userAccount.getUsername(), textFont));&#xD;
+		document.add(new Paragraph(&quot;Vor-Name:      &quot; + userAccount.getFirstname(), textFont));&#xD;
+		document.add(new Paragraph(&quot;Nach-Name:   &quot; + userAccount.getLastname(), textFont));&#xD;
+		document.add(new Paragraph(&quot;\n\n&quot;));&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bO2P1Eeu4zMb86T63zA" name="writeTableHeader" specification="_2xvtcGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bPGP1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bPWP1Eeu4zMb86T63zA" name="spalten" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((table == null) || (spalten == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+			&#xD;
+		PdfPCell cell = new PdfPCell();				&#xD;
+		cell.setBackgroundColor(Color.gray);&#xD;
+		cell.setPadding(10);&#xD;
+		&#xD;
+		for (String string : spalten) {&#xD;
+			cell.setPhrase(new Phrase(string, font));&#xD;
+			table.addCell(cell);&#xD;
+		}	&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_2xDJ4GP1Eeu4zMb86T63zA" name="PDFDocument" method="_2x2bNWP1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xDJ4WP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xDJ4mP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xDJ42P1Eeu4zMb86T63zA" type="_2xCi0GP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xDJ5GP1Eeu4zMb86T63zA" name="setHeader" method="_2x2bN2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xDJ5WP1Eeu4zMb86T63zA" name="title">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xvGYmP1Eeu4zMb86T63zA" name="setPersonalInfo" method="_2x2bOWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xvGY2P1Eeu4zMb86T63zA" name="userAccount" type="_2xjgM2P1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xvtcGP1Eeu4zMb86T63zA" name="writeTableHeader" method="_2x2bO2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xvtcWP1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xvtcmP1Eeu4zMb86T63zA" name="spalten" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xDw8GP1Eeu4zMb86T63zA" name="PDFNachbestellungsExporter">
+          <generalization xmi:id="_2xoYsGP1Eeu4zMb86T63zA" general="_2xCi0GP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x0l9GP1Eeu4zMb86T63zA" name="pdfContent" visibility="private" isOrdered="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2x0l9WP1Eeu4zMb86T63zA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2x0l-mP1Eeu4zMb86T63zA" name="iterator" visibility="private" type="_2xi5IGP1Eeu4zMb86T63zA" association="_2x5ecWP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x0l_2P1Eeu4zMb86T63zA" name="overMHBContent" visibility="private" type="_2xkHQ2P1Eeu4zMb86T63zA" isOrdered="true" association="_2x5edGP1Eeu4zMb86T63zA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2x1NAGP1Eeu4zMb86T63zA" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bPmP1Eeu4zMb86T63zA" name="PDFNachbestellungsExporter" specification="_2xDw8WP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bP2P1Eeu4zMb86T63zA" type="_2xDw8GP1Eeu4zMb86T63zA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>super();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bQGP1Eeu4zMb86T63zA" name="PDFNachbestellungsExporter" specification="_2xvtdGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bQWP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bQmP1Eeu4zMb86T63zA" name="iterator" type="_2xi5IGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bQ2P1Eeu4zMb86T63zA" name="overMHBContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bRGP1Eeu4zMb86T63zA" type="_2xDw8GP1Eeu4zMb86T63zA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>super();&#xD;
+		if ((pdfContent == null) || (iterator == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		this.pdfContent = pdfContent;&#xD;
+		this.iterator = iterator;&#xD;
+		this.overMHBContent = overMHBContent;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bRWP1Eeu4zMb86T63zA" name="writeTableData" specification="_2xwUgmP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bRmP1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bR2P1Eeu4zMb86T63zA" name="article">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2x2bSGP1Eeu4zMb86T63zA" name="amount" type="_2xnxpGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((table == null) || (article == null) || (amount == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+	&#xD;
+		// Zellen befüllen&#xD;
+		table.addCell(new Phrase(article));				// article name&#xD;
+		table.addCell(new Phrase(amount.toString()));				// amount&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bSWP1Eeu4zMb86T63zA" name="export" specification="_2xwUhmP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bSmP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		try {&#xD;
+			PdfWriter.getInstance(document, response.getOutputStream());&#xD;
+		} catch (DocumentException | IOException exception) {&#xD;
+			exception.printStackTrace();&#xD;
+		}&#xD;
+		&#xD;
+		&#xD;
+		// set Header and Footer&#xD;
+		setHeader(&quot;Nachbestellliste&quot;);&#xD;
+		document.setHeader(header);&#xD;
+		document.setFooter(footer);&#xD;
+&#xD;
+		document.open();&#xD;
+		Paragraph head = new Paragraph(&quot;Das ist die Nachbestelliste&quot;, headFont);&#xD;
+		head.setAlignment(1);&#xD;
+		document.add(head);&#xD;
+		document.add(new Paragraph(&quot;\n\n&quot;));&#xD;
+		&#xD;
+		&#xD;
+		if (!iterator.hasNext()) {&#xD;
+			document.add(new Paragraph(&quot;Die Nachbestellliste ist leer.&quot;));&#xD;
+		} else {&#xD;
+			PdfPTable table = new PdfPTable(2);										// create table&#xD;
+			table.setWidthPercentage(60);&#xD;
+			table.setSpacingAfter(35);&#xD;
+			table.setSpacingBefore(8);&#xD;
+			&#xD;
+			List&lt;String> headerList = Arrays.asList(&quot;Artikel&quot;, &quot;Anzahl&quot;);&#xD;
+			writeTableHeader(table, headerList);&#xD;
+			&#xD;
+			while (iterator.hasNext()) {&#xD;
+				Map.Entry entry = (Map.Entry)iterator.next();&#xD;
+				writeTableData(table, ((Commodity)entry.getKey()).getName(), (Quantity)entry.getValue());&#xD;
+			} &#xD;
+			document.add(table);	&#xD;
+		}&#xD;
+		&#xD;
+		document.add(new Paragraph(&quot;\n\n\n\n\n&quot;));&#xD;
+		&#xD;
+		PdfPTable table = new PdfPTable(1);										// create table&#xD;
+		table.setWidthPercentage(40);&#xD;
+		table.setSpacingAfter(35);&#xD;
+		table.setSpacingBefore(8);&#xD;
+		&#xD;
+		List&lt;String> headerList = Arrays.asList(&quot;Artikel&quot;);&#xD;
+		writeTableHeader(table, headerList);&#xD;
+		&#xD;
+		&#xD;
+		if (!overMHBContent.isEmpty()) {&#xD;
+			document.add(new Paragraph(&quot;Folgende Produkte sind abgelaufen und müssen nachbestellt werden:&quot;));&#xD;
+			document.add(new Paragraph(&quot;\n&quot;));&#xD;
+			&#xD;
+			for (Commodity element : overMHBContent) {&#xD;
+				table.addCell(new Phrase(element.getDescription()));&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		document.add(table);&#xD;
+		&#xD;
+		document.close();										&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_2xDw8WP1Eeu4zMb86T63zA" name="PDFNachbestellungsExporter" method="_2x2bPmP1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xDw8mP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xDw82P1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xDw9GP1Eeu4zMb86T63zA" type="_2xDw8GP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xvtdGP1Eeu4zMb86T63zA" name="PDFNachbestellungsExporter" method="_2x2bQGP1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xvteGP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xvteWP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xvtdWP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xvtdmP1Eeu4zMb86T63zA" name="iterator" type="_2xi5IGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xvtd2P1Eeu4zMb86T63zA" name="overMHBContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xvtemP1Eeu4zMb86T63zA" type="_2xDw8GP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xwUgmP1Eeu4zMb86T63zA" name="writeTableData" method="_2x2bRWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xwUg2P1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xwUhGP1Eeu4zMb86T63zA" name="article">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_2xwUhWP1Eeu4zMb86T63zA" name="amount" type="_2xnxpGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xwUhmP1Eeu4zMb86T63zA" name="export" method="_2x2bSWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xwUh2P1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xEYAGP1Eeu4zMb86T63zA" name="PDFPaycheckExporter">
+          <generalization xmi:id="_2xo_wmP1Eeu4zMb86T63zA" general="_2xCi0GP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x1NBWP1Eeu4zMb86T63zA" name="userAccount" visibility="private" type="_2xjgM2P1Eeu4zMb86T63zA" association="_2x5ed2P1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x1NB2P1Eeu4zMb86T63zA" name="employee" visibility="private" type="_2xkHR2P1Eeu4zMb86T63zA" association="_2x5eemP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x1NCWP1Eeu4zMb86T63zA" name="gehalt" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2x1NC2P1Eeu4zMb86T63zA" name="tasks" visibility="private" isOrdered="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2x1NDGP1Eeu4zMb86T63zA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2x1NDmP1Eeu4zMb86T63zA" name="currentdate" visibility="private" type="_2xo_wGP1Eeu4zMb86T63zA" association="_2x5efWP1Eeu4zMb86T63zA">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_2x1ND2P1Eeu4zMb86T63zA" value="LocalDate.now()"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bS2P1Eeu4zMb86T63zA" name="PDFPaycheckExporter" specification="_2xw7kGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bTGP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bTWP1Eeu4zMb86T63zA" name="employee" type="_2xkHR2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x2bTmP1Eeu4zMb86T63zA" type="_2xEYAGP1Eeu4zMb86T63zA" direction="return"/>
+            <language>java</language>
+            <body>super();&#xD;
+		if (employee == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		} else {&#xD;
+			this.userAccount = userAccount.get(); &#xD;
+			this.employee = employee;&#xD;
+			this.gehalt = employee.getSalary().toString();&#xD;
+			this.tasks = employee.getTasks();&#xD;
+		}&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x2bT2P1Eeu4zMb86T63zA" name="PDFPaycheckExporter" specification="_2xEYAWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x2bUGP1Eeu4zMb86T63zA" type="_2xEYAGP1Eeu4zMb86T63zA" direction="return"/>
+            <language>java</language>
+            <body>super();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CMGP1Eeu4zMb86T63zA" name="printTasksToString" specification="_2xw7l2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3CMWP1Eeu4zMb86T63zA" name="tasks" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x3CMmP1Eeu4zMb86T63zA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>if (tasks == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		String tasksString = &quot;&quot;;&#xD;
+		for (String task : tasks) {&#xD;
+			if (tasks.indexOf(task) == 0) {&#xD;
+				tasksString = task;&#xD;
+			} else {&#xD;
+				tasksString += &quot;, &quot; + task;&#xD;
+			}&#xD;
+		}&#xD;
+		return tasksString;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CM2P1Eeu4zMb86T63zA" name="export" specification="_2xxiomP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3CNGP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		try {&#xD;
+			PdfWriter.getInstance(document, response.getOutputStream());&#xD;
+		} catch (DocumentException | IOException exception) {&#xD;
+			exception.printStackTrace();&#xD;
+		}&#xD;
+	&#xD;
+		&#xD;
+		// set Header and Footer&#xD;
+		setHeader(&quot;Gehaltscheck &quot; + currentdate.getMonth().toString() + &quot; &quot; + currentdate.getYear());&#xD;
+		document.setHeader(header);&#xD;
+		document.setFooter(footer);&#xD;
+		&#xD;
+		&#xD;
+		document.open();&#xD;
+		&#xD;
+		// add head&#xD;
+		Paragraph head = new Paragraph(&quot;Gehaltscheck &quot; + currentdate.getMonth().toString() &#xD;
+				+ &quot; &quot; + currentdate.getYear(), headFont);&#xD;
+		head.setAlignment(1);&#xD;
+		document.add(head);&#xD;
+		&#xD;
+		// import Image to PDF &#xD;
+		// https://github.com/LibrePDF/OpenPDF/blob/master/pdf-toolbox/src/test/java/com/&#xD;
+		//			lowagie/examples/objects/images/Alignment.java&#xD;
+		try {																	// add Picture&#xD;
+		Image png = Image.getInstance(&quot;./src/main/resources/static/resources/bilder/person.png&quot;);&#xD;
+     png.setAlignment(Image.RIGHT);;&#xD;
+     document.add(png);&#xD;
+		} catch (DocumentException | IOException de) {&#xD;
+         System.err.println(de.getMessage());&#xD;
+     }&#xD;
+		&#xD;
+		// set personal information&#xD;
+		setPersonalInfo(userAccount);&#xD;
+		&#xD;
+		//Vertrag&#xD;
+		document.add(new Paragraph(&quot;Vertrag des Mitarbeiters: &quot; + employee.getContract().toString(), textFont));&#xD;
+		document.add(new Paragraph(&quot;Vertrag aktiv seit: &quot; + employee.getContract().startTime().toString(), textFont));&#xD;
+		document.add(new Paragraph(&quot;Vertrag läuft aus am: &quot; + employee.getContract().endTime().toString(), textFont));&#xD;
+		document.add(new Paragraph(&quot;\n\n&quot;));&#xD;
+		&#xD;
+		// Aufgaben des Mitarbeiters&#xD;
+		String tasksString = printTasksToString(tasks);&#xD;
+		document.add(new Paragraph(&quot;Aufgaben des Mitarbeiters: &quot; + tasksString, textFont));&#xD;
+		document.add(new Paragraph(&quot;\n\n&quot;));&#xD;
+		&#xD;
+		// Gehalt&#xD;
+		document.add(new Paragraph(&quot;Gehalt erhalten: &quot; + gehalt, headFont));&#xD;
+		&#xD;
+		document.close();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_2xEYAWP1Eeu4zMb86T63zA" name="PDFPaycheckExporter" method="_2x2bT2P1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xEYAmP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xEYA2P1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xEYBGP1Eeu4zMb86T63zA" type="_2xEYAGP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xw7kGP1Eeu4zMb86T63zA" name="PDFPaycheckExporter" method="_2x2bS2P1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xw7k2P1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xw7lGP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xw7kWP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xw7kmP1Eeu4zMb86T63zA" name="employee" type="_2xkHR2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xw7lWP1Eeu4zMb86T63zA" type="_2xEYAGP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xw7l2P1Eeu4zMb86T63zA" name="printTasksToString" method="_2x3CMGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xw7mGP1Eeu4zMb86T63zA" name="tasks" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xxioGP1Eeu4zMb86T63zA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xxiomP1Eeu4zMb86T63zA" name="export" method="_2x3CM2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xxio2P1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xE_EGP1Eeu4zMb86T63zA" name="PDFTransactionsExporter">
+          <generalization xmi:id="_2xqN4GP1Eeu4zMb86T63zA" general="_2xCi0GP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x10EWP1Eeu4zMb86T63zA" name="pdfContent" visibility="private" type="_2xi5KmP1Eeu4zMb86T63zA" isOrdered="true" association="_2x6FgWP1Eeu4zMb86T63zA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2x10EmP1Eeu4zMb86T63zA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_2x10FGP1Eeu4zMb86T63zA" name="userAccount" visibility="private" type="_2xjgM2P1Eeu4zMb86T63zA" association="_2x6FhGP1Eeu4zMb86T63zA"/>
+          <ownedAttribute xmi:id="_2x10FmP1Eeu4zMb86T63zA" name="studioUserRepository" visibility="private" isLeaf="true" type="_2xkHSWP1Eeu4zMb86T63zA" isReadOnly="true" association="_2x6Fh2P1Eeu4zMb86T63zA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CNWP1Eeu4zMb86T63zA" name="PDFTransactionsExporter" specification="_2xFmIGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3CNmP1Eeu4zMb86T63zA" type="_2xE_EGP1Eeu4zMb86T63zA" direction="return"/>
+            <language>java</language>
+            <body>super();&#xD;
+		this.studioUserRepository = null;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CN2P1Eeu4zMb86T63zA" name="PDFTransactionsExporter" specification="_2xyJsGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3COGP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x3COWP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x3COmP1Eeu4zMb86T63zA" name="studioUserRepository" type="_2xkHSWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x3CO2P1Eeu4zMb86T63zA" type="_2xE_EGP1Eeu4zMb86T63zA" direction="return"/>
+            <language>java</language>
+            <body>super();&#xD;
+		this.pdfContent = pdfContent;&#xD;
+		this.userAccount = userAccount.get(); &#xD;
+		this.studioUserRepository = studioUserRepository;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CPGP1Eeu4zMb86T63zA" name="writeTableData" specification="_2xyJuWP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3CPWP1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2x3CPmP1Eeu4zMb86T63zA" name="order" type="_2xi5KmP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if ((table == null) || (order == null)) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		&#xD;
+		table.addCell(new Phrase(order.getDateCreated().toLocalDate().toString()));&#xD;
+		table.addCell(new Phrase(Commodity.MoneySymbol(order.getTotal().toString())));&#xD;
+		&#xD;
+		String productNames = &quot;&quot;;&#xD;
+		for (OrderLine orderLine : order.getOrderLines()) {&#xD;
+			//getProduct&#xD;
+			productNames = productNames + orderLine.getProductName() + &quot;\n\n&quot;;&#xD;
+		}	&#xD;
+		table.addCell(new Phrase(productNames));&#xD;
+		&#xD;
+		String productPrices = &quot;&quot;;&#xD;
+		for (OrderLine orderLine : order.getOrderLines()) {&#xD;
+			//getProduct&#xD;
+			productPrices = productPrices + Commodity.MoneySymbol(orderLine.getPrice()) + &quot;\n\n&quot;;&#xD;
+		}	&#xD;
+		table.addCell(new Phrase(productPrices));&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2x3CP2P1Eeu4zMb86T63zA" name="export" specification="_2xywwGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2x3CQGP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+            <language>java</language>
+            <body>if (response == null) {&#xD;
+			throw new IllegalArgumentException();&#xD;
+		}&#xD;
+		&#xD;
+		&#xD;
+		try {&#xD;
+			PdfWriter.getInstance(document, response.getOutputStream());&#xD;
+		} catch (DocumentException | IOException exception) {&#xD;
+			exception.printStackTrace();&#xD;
+		}&#xD;
+		&#xD;
+&#xD;
+		// set Header and Footer&#xD;
+		setHeader(&quot;Transaktionen&quot;);&#xD;
+		document.setHeader(header);&#xD;
+		document.setFooter(footer);&#xD;
+		&#xD;
+		document.open();&#xD;
+		Paragraph head = new Paragraph(&quot;Das sind ihre Transaktionen&quot;, headFont);&#xD;
+		head.setAlignment(1);&#xD;
+		document.add(head);&#xD;
+		&#xD;
+		// import Image to PDF &#xD;
+		// https://github.com/LibrePDF/OpenPDF/blob/master/pdf-toolbox/src/test/java/com/&#xD;
+		//		lowagie/examples/objects/images/Alignment.java&#xD;
+		try {																	// add Picture&#xD;
+		Image png = Image.getInstance(&quot;./src/main/resources/static/resources/bilder/person.png&quot;);&#xD;
+     png.setAlignment(Image.RIGHT);;&#xD;
+     document.add(png);&#xD;
+		} catch (DocumentException | IOException de) {&#xD;
+         System.err.println(de.getMessage());&#xD;
+     }&#xD;
+		&#xD;
+		// set personal information&#xD;
+		setPersonalInfo(userAccount);&#xD;
+		&#xD;
+		&#xD;
+		LocalDate formerDate = null;&#xD;
+		PdfPTable table = null;&#xD;
+		&#xD;
+		// iterate trought all transactions and create new tables if necessery&#xD;
+		for (Order order : pdfContent) {&#xD;
+			LocalDate tempDate = order.getDateCreated().toLocalDate();&#xD;
+			&#xD;
+			if ((formerDate == null) || (formerDate.getMonth() != tempDate.getMonth())){&#xD;
+				if (table != null) {&#xD;
+					document.add(table);							// add table to document&#xD;
+				}&#xD;
+				document.add(new Paragraph(tempDate.getMonth().toString() + &quot; - &quot; + tempDate.getYear(), textFont));&#xD;
+				document.add(new Paragraph(&quot;Kosten für Mitgliedschaft: &quot; &#xD;
+						+ studioUserRepository.findByUserAccount(userAccount).getContract().getPrice().toString()));&#xD;
+				table = new PdfPTable(4);										// create table&#xD;
+				table.setWidthPercentage(100);&#xD;
+				table.setSpacingAfter(35);&#xD;
+				table.setSpacingBefore(8);&#xD;
+				&#xD;
+				List&lt;String> headerList = Arrays.asList(&quot;Datum&quot;, &quot;Preis&quot;, &quot;Artikel&quot;, &quot;Artikelpreis&quot;);&#xD;
+				writeTableHeader(table, headerList);										// add table header		&#xD;
+			}&#xD;
+			writeTableData(table, order);								// fill table with data&#xD;
+			formerDate = tempDate;												// vorgänger setzen&#xD;
+		}&#xD;
+		if (table != null) {&#xD;
+			document.add(table);													// letzte tabelle einfügen&#xD;
+		} else {&#xD;
+			document.add(new Paragraph(&quot;Sie haben keine Transaktionen getätigt!&quot;, textFont));&#xD;
+		}&#xD;
+			&#xD;
+		document.close();										&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_2xFmIGP1Eeu4zMb86T63zA" name="PDFTransactionsExporter" method="_2x3CNWP1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xFmIWP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xFmImP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xFmI2P1Eeu4zMb86T63zA" type="_2xE_EGP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xyJsGP1Eeu4zMb86T63zA" name="PDFTransactionsExporter" method="_2x3CN2P1Eeu4zMb86T63zA">
+            <eAnnotations xmi:id="_2xyJtGP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_2xyJtWP1Eeu4zMb86T63zA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_2xyJsWP1Eeu4zMb86T63zA" name="pdfContent" type="_2xi5JGP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xyJsmP1Eeu4zMb86T63zA" name="userAccount" type="_2xi5JmP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xyJs2P1Eeu4zMb86T63zA" name="studioUserRepository" type="_2xkHSWP1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xyJtmP1Eeu4zMb86T63zA" type="_2xE_EGP1Eeu4zMb86T63zA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xyJuWP1Eeu4zMb86T63zA" name="writeTableData" method="_2x3CPGP1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xyJumP1Eeu4zMb86T63zA" name="table" type="_2xmjh2P1Eeu4zMb86T63zA"/>
+            <ownedParameter xmi:id="_2xyJu2P1Eeu4zMb86T63zA" name="order" type="_2xi5KmP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_2xywwGP1Eeu4zMb86T63zA" name="export" method="_2x3CP2P1Eeu4zMb86T63zA">
+            <ownedParameter xmi:id="_2xywwWP1Eeu4zMb86T63zA" name="response" type="_2xi5KGP1Eeu4zMb86T63zA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x4QUGP1Eeu4zMb86T63zA" name="" memberEnd="_2x4QUWP1Eeu4zMb86T63zA _2xzX0GP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x4QUWP1Eeu4zMb86T63zA" name="" type="_2xAGkGP1Eeu4zMb86T63zA" association="_2x4QUGP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x4QU2P1Eeu4zMb86T63zA" name="" memberEnd="_2x4QVGP1Eeu4zMb86T63zA _2xzX1GP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x4QVGP1Eeu4zMb86T63zA" name="" type="_2xAGkGP1Eeu4zMb86T63zA" association="_2x4QU2P1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x4QVmP1Eeu4zMb86T63zA" name="" memberEnd="_2x4QV2P1Eeu4zMb86T63zA _2xzX1mP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x4QV2P1Eeu4zMb86T63zA" name="" type="_2xAGkGP1Eeu4zMb86T63zA" association="_2x4QVmP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x4QWWP1Eeu4zMb86T63zA" name="" memberEnd="_2x4QWmP1Eeu4zMb86T63zA _2xzX12P1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x4QWmP1Eeu4zMb86T63zA" name="" type="_2xAGkGP1Eeu4zMb86T63zA" association="_2x4QWWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x4QXGP1Eeu4zMb86T63zA" name="" memberEnd="_2x4QXWP1Eeu4zMb86T63zA _2xz-4GP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x4QXWP1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x4QXGP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x43YWP1Eeu4zMb86T63zA" name="" memberEnd="_2x43YmP1Eeu4zMb86T63zA _2xz-42P1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x43YmP1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x43YWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x43ZGP1Eeu4zMb86T63zA" name="" memberEnd="_2x43ZWP1Eeu4zMb86T63zA _2xz-5mP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x43ZWP1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x43ZGP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x43Z2P1Eeu4zMb86T63zA" name="" memberEnd="_2x43aGP1Eeu4zMb86T63zA _2xz-6WP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x43aGP1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x43Z2P1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x43amP1Eeu4zMb86T63zA" name="" memberEnd="_2x43a2P1Eeu4zMb86T63zA _2xz-62P1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x43a2P1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x43amP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x43bWP1Eeu4zMb86T63zA" name="" memberEnd="_2x43bmP1Eeu4zMb86T63zA _2x0l8WP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x43bmP1Eeu4zMb86T63zA" name="" type="_2xCi0GP1Eeu4zMb86T63zA" association="_2x43bWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x5ecWP1Eeu4zMb86T63zA" name="" memberEnd="_2x5ecmP1Eeu4zMb86T63zA _2x0l-mP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x5ecmP1Eeu4zMb86T63zA" name="" type="_2xDw8GP1Eeu4zMb86T63zA" association="_2x5ecWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x5edGP1Eeu4zMb86T63zA" name="" memberEnd="_2x5edWP1Eeu4zMb86T63zA _2x0l_2P1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x5edWP1Eeu4zMb86T63zA" name="" type="_2xDw8GP1Eeu4zMb86T63zA" association="_2x5edGP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x5ed2P1Eeu4zMb86T63zA" name="" memberEnd="_2x5eeGP1Eeu4zMb86T63zA _2x1NBWP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x5eeGP1Eeu4zMb86T63zA" name="" type="_2xEYAGP1Eeu4zMb86T63zA" association="_2x5ed2P1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x5eemP1Eeu4zMb86T63zA" name="" memberEnd="_2x5ee2P1Eeu4zMb86T63zA _2x1NB2P1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x5ee2P1Eeu4zMb86T63zA" name="" type="_2xEYAGP1Eeu4zMb86T63zA" association="_2x5eemP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x5efWP1Eeu4zMb86T63zA" name="" memberEnd="_2x5efmP1Eeu4zMb86T63zA _2x1NDmP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x5efmP1Eeu4zMb86T63zA" name="" type="_2xEYAGP1Eeu4zMb86T63zA" association="_2x5efWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x6FgWP1Eeu4zMb86T63zA" name="" memberEnd="_2x6FgmP1Eeu4zMb86T63zA _2x10EWP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x6FgmP1Eeu4zMb86T63zA" name="" type="_2xE_EGP1Eeu4zMb86T63zA" association="_2x6FgWP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x6FhGP1Eeu4zMb86T63zA" name="" memberEnd="_2x6FhWP1Eeu4zMb86T63zA _2x10FGP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x6FhWP1Eeu4zMb86T63zA" name="" type="_2xE_EGP1Eeu4zMb86T63zA" association="_2x6FhGP1Eeu4zMb86T63zA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_2x6Fh2P1Eeu4zMb86T63zA" name="" memberEnd="_2x6FiGP1Eeu4zMb86T63zA _2x10FmP1Eeu4zMb86T63zA">
+          <ownedEnd xmi:id="_2x6FiGP1Eeu4zMb86T63zA" name="" type="_2xE_EGP1Eeu4zMb86T63zA" association="_2x6Fh2P1Eeu4zMb86T63zA"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2w6nAGP1Eeu4zMb86T63zA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nAWP1Eeu4zMb86T63zA" name="text">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xiSEGP1Eeu4zMb86T63zA" name="DateFormat"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xiSEmP1Eeu4zMb86T63zA" name="SimpleDateFormat"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nAmP1Eeu4zMb86T63zA" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_2xiSFGP1Eeu4zMb86T63zA" name="Date"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_2xi5IGP1Eeu4zMb86T63zA" name="Iterator"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xi5ImP1Eeu4zMb86T63zA" name="LinkedList"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_2xi5JGP1Eeu4zMb86T63zA" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xi5JmP1Eeu4zMb86T63zA" name="Optional"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xnxoGP1Eeu4zMb86T63zA" name="Arrays"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_2xnxomP1Eeu4zMb86T63zA" name="Map"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w8cMGP1Eeu4zMb86T63zA" name="awt">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xlVYGP1Eeu4zMb86T63zA" name="Color"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w9DQGP1Eeu4zMb86T63zA" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xnKkGP1Eeu4zMb86T63zA" name="IOException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w9qUGP1Eeu4zMb86T63zA" name="time">
+        <packagedElement xmi:type="uml:Class" xmi:id="_2xo_wGP1Eeu4zMb86T63zA" name="LocalDate"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2w6nA2P1Eeu4zMb86T63zA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nBGP1Eeu4zMb86T63zA" name="servlet">
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nBWP1Eeu4zMb86T63zA" name="http">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_2xi5KGP1Eeu4zMb86T63zA" name="HttpServletResponse"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2w6nBmP1Eeu4zMb86T63zA" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nB2P1Eeu4zMb86T63zA" name="salespointframework">
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nCGP1Eeu4zMb86T63zA" name="order">
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xi5KmP1Eeu4zMb86T63zA" name="Order"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_2xjgMWP1Eeu4zMb86T63zA" name="OrderManagement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xpm0GP1Eeu4zMb86T63zA" name="OrderLine"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nCWP1Eeu4zMb86T63zA" name="useraccount">
+          <packagedElement xmi:type="uml:Package" xmi:id="_2w6nCmP1Eeu4zMb86T63zA" name="web">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_2xjgNWP1Eeu4zMb86T63zA" name="LoggedIn"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xjgM2P1Eeu4zMb86T63zA" name="UserAccount"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w9DQWP1Eeu4zMb86T63zA" name="quantity">
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xnxpGP1Eeu4zMb86T63zA" name="Quantity"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w6nC2P1Eeu4zMb86T63zA" name="springframework">
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nDGP1Eeu4zMb86T63zA" name="security">
+          <packagedElement xmi:type="uml:Package" xmi:id="_2w6nDWP1Eeu4zMb86T63zA" name="access">
+            <packagedElement xmi:type="uml:Package" xmi:id="_2w6nDmP1Eeu4zMb86T63zA" name="prepost">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_2xjgN2P1Eeu4zMb86T63zA" name="PreAuthorize"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nD2P1Eeu4zMb86T63zA" name="stereotype">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_2xjgOWP1Eeu4zMb86T63zA" name="Controller"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w6nEGP1Eeu4zMb86T63zA" name="web">
+          <packagedElement xmi:type="uml:Package" xmi:id="_2w6nEWP1Eeu4zMb86T63zA" name="bind">
+            <packagedElement xmi:type="uml:Package" xmi:id="_2w6nEmP1Eeu4zMb86T63zA" name="annotation">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_2xkHQWP1Eeu4zMb86T63zA" name="PostMapping"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2w8cMWP1Eeu4zMb86T63zA" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_2w8cMmP1Eeu4zMb86T63zA" name="lowagie">
+        <packagedElement xmi:type="uml:Package" xmi:id="_2w8cM2P1Eeu4zMb86T63zA" name="text">
+          <packagedElement xmi:type="uml:Package" xmi:id="_2w8cNGP1Eeu4zMb86T63zA" name="pdf">
+            <packagedElement xmi:type="uml:Class" xmi:id="_2xmjhWP1Eeu4zMb86T63zA" name="PdfPCell"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_2xmjh2P1Eeu4zMb86T63zA" name="PdfPTable"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_2xnxpmP1Eeu4zMb86T63zA" name="PdfWriter"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xl8cWP1Eeu4zMb86T63zA" name="Document"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xl8c2P1Eeu4zMb86T63zA" name="Font"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xl8dWP1Eeu4zMb86T63zA" name="FontFactory"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xl8d2P1Eeu4zMb86T63zA" name="HeaderFooter"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xl8eWP1Eeu4zMb86T63zA" name="PageSize"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xmjgWP1Eeu4zMb86T63zA" name="Paragraph"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xmjg2P1Eeu4zMb86T63zA" name="Phrase"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_2rFEwGP1Eeu4zMb86T63zA">
+      <eAnnotations xmi:id="_2rFEwWP1Eeu4zMb86T63zA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_2rFEwmP1Eeu4zMb86T63zA" base_Package="_2lqZQGP1Eeu4zMb86T63zA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2xAtoGP1Eeu4zMb86T63zA" base_Element="_2xAGkGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2xBUsGP1Eeu4zMb86T63zA" base_Element="_2xAGkGP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xBUsWP1Eeu4zMb86T63zA" name="Controller"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_2xiSEWP1Eeu4zMb86T63zA" base_Element="_2xiSEGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xiSE2P1Eeu4zMb86T63zA" base_Element="_2xiSEmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xiSFWP1Eeu4zMb86T63zA" base_Element="_2xiSFGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xi5IWP1Eeu4zMb86T63zA" base_Element="_2xi5IGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xi5I2P1Eeu4zMb86T63zA" base_Element="_2xi5ImP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xi5JWP1Eeu4zMb86T63zA" base_Element="_2xi5JGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xi5J2P1Eeu4zMb86T63zA" base_Element="_2xi5JmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xi5KWP1Eeu4zMb86T63zA" base_Element="_2xi5KGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xjgMGP1Eeu4zMb86T63zA" base_Element="_2xi5KmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xjgMmP1Eeu4zMb86T63zA" base_Element="_2xjgMWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xjgNGP1Eeu4zMb86T63zA" base_Element="_2xjgM2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xjgNmP1Eeu4zMb86T63zA" base_Element="_2xjgNWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xjgOGP1Eeu4zMb86T63zA" base_Element="_2xjgN2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHQGP1Eeu4zMb86T63zA" base_Element="_2xjgOWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHQmP1Eeu4zMb86T63zA" base_Element="_2xkHQWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHRGP1Eeu4zMb86T63zA" base_Element="_2xkHQ2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHRmP1Eeu4zMb86T63zA" base_Element="_2xkHRWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHSGP1Eeu4zMb86T63zA" base_Element="_2xkHR2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xkHSmP1Eeu4zMb86T63zA" base_Element="_2xkHSWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xl8cGP1Eeu4zMb86T63zA" base_Element="_2xlVYGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xl8cmP1Eeu4zMb86T63zA" base_Element="_2xl8cWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xl8dGP1Eeu4zMb86T63zA" base_Element="_2xl8c2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xl8dmP1Eeu4zMb86T63zA" base_Element="_2xl8dWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xl8eGP1Eeu4zMb86T63zA" base_Element="_2xl8d2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xmjgGP1Eeu4zMb86T63zA" base_Element="_2xl8eWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xmjgmP1Eeu4zMb86T63zA" base_Element="_2xmjgWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xmjhGP1Eeu4zMb86T63zA" base_Element="_2xmjg2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xmjhmP1Eeu4zMb86T63zA" base_Element="_2xmjhWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xmjiGP1Eeu4zMb86T63zA" base_Element="_2xmjh2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xnKkWP1Eeu4zMb86T63zA" base_Element="_2xnKkGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xnxoWP1Eeu4zMb86T63zA" base_Element="_2xnxoGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xnxo2P1Eeu4zMb86T63zA" base_Element="_2xnxomP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xnxpWP1Eeu4zMb86T63zA" base_Element="_2xnxpGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xnxp2P1Eeu4zMb86T63zA" base_Element="_2xnxpmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xo_wWP1Eeu4zMb86T63zA" base_Element="_2xo_wGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2xpm0WP1Eeu4zMb86T63zA" base_Element="_2xpm0GP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:StyledElement xmi:id="_2xsDF2P1Eeu4zMb86T63zA" base_Element="_2xsDEGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xsDGGP1Eeu4zMb86T63zA" genericsValue="Order" base_Element="_2xsDEWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xsqI2P1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xsqImP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2xsqJGP1Eeu4zMb86T63zA" base_Element="_2xsqImP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xsqJWP1Eeu4zMb86T63zA" name="LoggedIn"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_2xsqJmP1Eeu4zMb86T63zA" base_Element="_2xsqIGP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xsqJ2P1Eeu4zMb86T63zA" name="PostMapping">
+      <annotationParameters xmi:id="_2xsqKGP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCAGP4Eeu4zMb86T63zA" value="&quot;/downloadTA&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_2xtRNWP1Eeu4zMb86T63zA" base_Element="_2xtRMGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xtRNmP1Eeu4zMb86T63zA" genericsValue="Order" base_Element="_2xtRMmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xtRN2P1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xtRNGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xt4QGP1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xtROmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2xt4QWP1Eeu4zMb86T63zA" base_Element="_2xtROmP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xt4QmP1Eeu4zMb86T63zA" name="LoggedIn"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="_2xt4Q2P1Eeu4zMb86T63zA" base_Element="_2xtROGP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xt4RGP1Eeu4zMb86T63zA" name="PostMapping">
+      <annotationParameters xmi:id="_2xt4RWP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCAWP4Eeu4zMb86T63zA" value="&quot;/downloadGC&quot;"/>
+      </annotationParameters>
+    </annotations>
+    <annotations xmi:id="_2xt4RmP1Eeu4zMb86T63zA" name="PreAuthorize">
+      <annotationParameters xmi:id="_2xt4R2P1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCAmP4Eeu4zMb86T63zA" value="&quot;hasAnyRole('EMPLOYEE','BOSS')&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_2xt4TWP1Eeu4zMb86T63zA" base_Element="_2xt4SGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xufUGP1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xt4S2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2xufU2P1Eeu4zMb86T63zA" base_Element="_2xufUWP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2xufVGP1Eeu4zMb86T63zA" name="PostMapping">
+      <annotationParameters xmi:id="_2xufVWP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCA2P4Eeu4zMb86T63zA" value="&quot;/downloadNBL&quot;"/>
+      </annotationParameters>
+    </annotations>
+    <annotations xmi:id="_2xufVmP1Eeu4zMb86T63zA" name="PreAuthorize">
+      <annotationParameters xmi:id="_2xufV2P1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCBGP4Eeu4zMb86T63zA" value="&quot;hasAnyRole('EMPLOYEE','BOSS')&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_2xufXmP1Eeu4zMb86T63zA" base_Element="_2xufWGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xufX2P1Eeu4zMb86T63zA" genericsValue="String" base_Element="_2xufWmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xvGYGP1Eeu4zMb86T63zA" genericsValue="?" base_Element="_2xufXGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xvGYWP1Eeu4zMb86T63zA" genericsValue="Commodity" base_Element="_2xufXWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xvtc2P1Eeu4zMb86T63zA" genericsValue="String" base_Element="_2xvtcmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xwUgGP1Eeu4zMb86T63zA" genericsValue="String" base_Element="_2xvtdWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xwUgWP1Eeu4zMb86T63zA" genericsValue="Commodity" base_Element="_2xvtd2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xw7lmP1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xw7kWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xxioWP1Eeu4zMb86T63zA" genericsValue="String" base_Element="_2xw7mGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xyJt2P1Eeu4zMb86T63zA" genericsValue="Order" base_Element="_2xyJsWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xyJuGP1Eeu4zMb86T63zA" genericsValue="UserAccount" base_Element="_2xyJsmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Generics xmi:id="_2xzX1WP1Eeu4zMb86T63zA" genericsValue="Order" base_Element="_2xzX1GP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2xz-4mP1Eeu4zMb86T63zA" base_Element="_2xz-4GP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2xz-5WP1Eeu4zMb86T63zA" base_Element="_2xz-42P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2xz-6GP1Eeu4zMb86T63zA" base_Element="_2xz-5mP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2xz-6mP1Eeu4zMb86T63zA" base_Element="_2xz-6WP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x0l8GP1Eeu4zMb86T63zA" base_Element="_2xz-62P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x0l82P1Eeu4zMb86T63zA" base_Element="_2x0l8WP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x0l9mP1Eeu4zMb86T63zA" base_Element="_2x0l9GP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2x0l92P1Eeu4zMb86T63zA" base_Element="_2x0l9GP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2x0l-GP1Eeu4zMb86T63zA" name="SuppressWarnings">
+      <annotationParameters xmi:id="_2x0l-WP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrCBWP4Eeu4zMb86T63zA" value="&quot;unused&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x0l-2P1Eeu4zMb86T63zA" base_Element="_2x0l-mP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2x0l_GP1Eeu4zMb86T63zA" base_Element="_2x0l-mP1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2x0l_WP1Eeu4zMb86T63zA" name="SuppressWarnings">
+      <annotationParameters xmi:id="_2x0l_mP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrpEGP4Eeu4zMb86T63zA" value="&quot;rawtypes&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x1NAWP1Eeu4zMb86T63zA" base_Element="_2x0l_2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Annotations xmi:id="_2x1NAmP1Eeu4zMb86T63zA" base_Element="_2x0l_2P1Eeu4zMb86T63zA">
+    <annotations xmi:id="_2x1NA2P1Eeu4zMb86T63zA" name="SuppressWarnings">
+      <annotationParameters xmi:id="_2x1NBGP1Eeu4zMb86T63zA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_CtrpEWP4Eeu4zMb86T63zA" value="&quot;unused&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x1NBmP1Eeu4zMb86T63zA" base_Element="_2x1NBWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x1NCGP1Eeu4zMb86T63zA" base_Element="_2x1NB2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x1NCmP1Eeu4zMb86T63zA" base_Element="_2x1NCWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x1NDWP1Eeu4zMb86T63zA" base_Element="_2x1NC2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x10EGP1Eeu4zMb86T63zA" base_Element="_2x1NDmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x10E2P1Eeu4zMb86T63zA" base_Element="_2x10EWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x10FWP1Eeu4zMb86T63zA" base_Element="_2x10FGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_2x10F2P1Eeu4zMb86T63zA" base_Element="_2x10FmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x4QUmP1Eeu4zMb86T63zA" base_Element="_2x4QUGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x4QVWP1Eeu4zMb86T63zA" base_Element="_2x4QU2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x4QWGP1Eeu4zMb86T63zA" base_Element="_2x4QVmP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x4QW2P1Eeu4zMb86T63zA" base_Element="_2x4QWWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x43YGP1Eeu4zMb86T63zA" base_Element="_2x4QXGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x43Y2P1Eeu4zMb86T63zA" base_Element="_2x43YWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x43ZmP1Eeu4zMb86T63zA" base_Element="_2x43ZGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x43aWP1Eeu4zMb86T63zA" base_Element="_2x43Z2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x43bGP1Eeu4zMb86T63zA" base_Element="_2x43amP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x5ecGP1Eeu4zMb86T63zA" base_Element="_2x43bWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x5ec2P1Eeu4zMb86T63zA" base_Element="_2x5ecWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x5edmP1Eeu4zMb86T63zA" base_Element="_2x5edGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x5eeWP1Eeu4zMb86T63zA" base_Element="_2x5ed2P1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x5efGP1Eeu4zMb86T63zA" base_Element="_2x5eemP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x6FgGP1Eeu4zMb86T63zA" base_Element="_2x5efWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x6Fg2P1Eeu4zMb86T63zA" base_Element="_2x6FgWP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x6FhmP1Eeu4zMb86T63zA" base_Element="_2x6FhGP1Eeu4zMb86T63zA"/>
+  <UMLLabProfile:Reference xmi:id="_2x6FiWP1Eeu4zMb86T63zA" base_Element="_2x6Fh2P1Eeu4zMb86T63zA"/>
+</xmi:XMI>

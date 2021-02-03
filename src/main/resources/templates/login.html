@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+    href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+    href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+    href="../static/resources/css/navigationbar.css" type="text/css"/>
+    <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+    <meta charset="utf-8">
+    <title th:text="#{login.title}">Fitnessstudio</title>
+</head>
+<body>
+    <div id="brpic"></div>
+	<nav th:include="navigation :: navigation"></nav>
+
+
+
+    <article class="mainelement" id="smallmainelement">
+        <header th:text="#{login.caption}">Einloggen</header>
+        
+        <div th:if="${error}" th:text="#{login.error}" class="alert alert-danger" role="alert"></div>
+        <form method="post" role="form" class="ui form" th:action="@{/login}" >
+
+        <div class="field">
+            <label th:text="#{login.username}" for="username">Username</label>
+            <input type="text" id="username" name="username" autofocus="autofocus"/> <br/>
+        </div>
+
+        <div class="field">
+            <label th:text="#{login.password}" for="password">Password</label>
+            <input type="password" id="password" name="password"/> <br/>
+        </div>
+            
+            <button type="submit" th:text="#{login.login}" class="verwbuttonsColored" id="verwbuttonsBig">Log in</button>
+        </form>
+
+        <br>
+       <tr th:each=" user : ${userList}">
+           <td th:text="${user.userAccount.id}">Paul</td>
+           <td th:text="${user.username}">Nöthnitzer Straße 46</td>
+           <td th:text="${user.firstname}">Nöthnitzer Straße 46</td>
+           <td th:text="${user.lastname}">Nöthnitzer Straße 46</td>
+           &lt;!&ndash; <td th:text="${user.address}">Nöthnitzer Straße 46</td> &ndash;&gt;
+           <td th:text="${user.email}">Nöthnitzer Straße 46</td>
+           <td th:text="${user.phonenumber}">Nöthnitzer Straße 46</td>
+           <br>
+       </tr>
+    </article>
+ 
+</body>
+</html>

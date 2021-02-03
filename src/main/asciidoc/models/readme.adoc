@@ -1,0 +1,6 @@
+= Modelle Ordner
+
+In diesem Ordner sollen die erstellten Diagramme (Bilder) sowie das zugehörige Modell (je eines für Analyse und Entwurf) abgelegt werden.
+Achten Sie auf eine Benennung, welche die Art des Diagramms beinhaltet.
+
+Die erstellten Diagramme können somit einfach in der Dokumentation referenziert werden.

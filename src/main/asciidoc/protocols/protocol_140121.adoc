@@ -1,0 +1,56 @@
+= Protokoll Gruppe 03
+
+Treffen am 14.01.2021
+
+Ort:      Discord +
+Beginn:   11:10 Uhr +
+Ende:     11:40 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+21.01.2021, 11:10 Uhr, Discord
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Spalte für Lagerbestand bei Produkten hinzufügen
+* MHD für Produkte bzw. Überprüfung
+* Tests und Testplan
+* Entwurfsentscheidungen in Entwicklerdoku
+
+== Retrospektive des letzten Sprints
+Muss-Kriterien abgeschlossen
+
+|===
+|Aufgabe |Status |Bemerkung
+|StudioUser     |abgeschlossen |
+|Manager     |abgeschlossen |
+|Requests     |abgeschlossen |
+|Shop     |abgeschlossen |
+|Fitnessstudio     |abgeschlossen |
+|Frontend    |abgeschlossen |  
+|===
+
+== Planung des nächsten Sprints
+Kann-Kriterien abschließen
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|StudioUser |Verwaltung der Mitglieder und Mitarbeiter |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Shop     |Transaktionen im Shop umsetzen, Interface zum Produkte erstellen |Sebastian                |in Bearbeitung
+|Fitnessstudio     |Affiliate Bonus umsetzen  |Yaoxin                |in Bearbeitung
+|Frontend |Frontend überarbeiten |Nils |in Bearbeitung
+|===

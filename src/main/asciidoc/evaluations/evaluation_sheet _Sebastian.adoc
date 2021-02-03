@@ -1,0 +1,26 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2020/21
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:**
+
+**Gruppe:**
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+	Ich habe gelernt, mit springboot/salespoint umzugehen
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+	ich habe sehr freundliches Team, in dem wir uns gegenseitig unterstützt haben
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+	Springboot und Salespoint hat mich bei meiner Arbeit sehr unetrstützt. Am besten ist die dependency injection von Spring
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+Es müsste eine umfangreichere einführung in Spring geben, wo besonders auf die Annotations eingegangen wird
+
+== Feedback für den Tutor
+ Ich bin zufrieden mit dem Tutor
+
+== Sonstiges und Anmerkungen
+-

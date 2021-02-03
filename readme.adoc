@@ -1,0 +1,53 @@
+image:https://github.com/st-tu-dresden-praktikum/swt20w03/workflows/CI%20build/badge.svg["CI Build", link="https://github.com/st-tu-dresden-praktikum/swt20w03/actions"]
+image:https://img.shields.io/badge/SonarQube-checked-blue?logo=sonarqube["SonarQube status", link="https://st-lab-ci.inf.tu-dresden.de/sonarqube/"]
+
+// Hi there! We've already included some generally useful information in here.
+// Feel free to edit the first section to add a short description of your task and your project.
+
+= FitnessStudio
+
+* a Java 11 web application based on Spring Boot and Salespoint framework (see `src/main/java` and `src/test/java`)
+* Asciidoc documentation templates in `src/main/asciidoc`
+
+== Important documents in this repo
+
+* link:src/main/asciidoc/protocols[Meeting Protocols]
+* link:src/main/asciidoc/time_recording.adoc[Time recording (Zeiterfassung)]
+* link:src/main/asciidoc/pflichtenheft.adoc[Requirements specification (Pflichtenheft)]
+* link:src/main/asciidoc/developer_documentation.adoc[Developer documentation (Entwicklerdokumentation)]
+
+== The repository layout
+
+The repository follows the standard Maven project layout. Nearly all artifacts are stored in a subdirectory of `src/`:
+
+  src/
+  ├── main/
+  │   ├── asciidoc/   -- Documentation of the development process and application (Asciidoc format)
+  │   ├── java/       -- Main source code of the application, separated into packages
+  │   └── resources/  -- Static assets (images, stylesheets), Thymeleaf templates, etc.
+  └── test/
+      └── java/       -- Source code of JUnit tests is stored separately
+
+**Pro tip:** In GitHub, press *t* and a "fuzzy file finder" will appear, making it easy to navigate to a file.
+
+== Standard-Logins:
+
+[options="header"]
+|===
+|Rolle |Username |Password
+|Boss |boss |123 
+|Employee |employee1 |123 
+|Employee |employee2 |123 
+|User |user1 |123 
+|User |user2 |123 
+|User |user3 |123 
+|===
+
+== How to run the application?
+
+* In the IDE: find `Application.java`, right-click project, select "Run As > Java Application"
+* From the command line: run `./mvnw spring-boot:run`
+
+== How to package the application?
+
+* Run `./mvnw clean package`. The packaged application (a JAR in `target/`) can be run with `java -jar $jarName`.

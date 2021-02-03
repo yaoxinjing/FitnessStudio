@@ -1,0 +1,16 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# IntelliJ IDEA supports it out of the box. Eclipse users need
+# to install a plugin: https://marketplace.eclipse.org/node/2506426
+
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+
+[*.java]
+indent_style = tab
+
+[pom.xml]
+indent_style = tab

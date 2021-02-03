@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{index.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="smallmainelement">
+            <header>Fehler!</header>
+            <hr>
+            <p>Irgendwas ist hier falsch.</p>
+            <p>Es gibt verschiedene Gründe, weshalb Ihnen diese Seite angezeigt wird.</p>
+            <p>1. Sie haben eine Seite aufgerufen, für welche Sie keine Berechtigung besitzen</p>
+            <p>2. Die angeforderte Seite existiert nicht.</p>
+            <p>3. Ein unbekannter Fehler ist aufgetreten.</p>
+            <br>
+            <p>Sollten Sie weitere Hilfe benötigen, können Sie sich an unseren Kundensupport wenden
+              oder kommen persönlich vorbei.
+            </p>
+        </article>
+
+
+    <!-- footer Navigation -->
+    <nav th:include="footerNav :: footerNav"></nav>
+
+    </body>
+</html>

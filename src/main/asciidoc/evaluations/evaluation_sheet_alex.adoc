@@ -1,0 +1,34 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2020/21
+
+**Von:** Alexander Phieler
+
+**Gruppe:** 03
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+// Ausführung der positiven und negativen Erfahrungen, die im Softwarepraktikum gesammelt wurden
+* Ich habe gelernt die aussagekräftigen und hilfreichen Fehlermeldungen aus anderen Programmiersprachen zu schätzen.
+* Durch meine Arbeit in der Hoschulgruppe Elbflorace waren mir die Abläufe im Allgemeinen ("profesionelles Arbeiten") schon sehr gut bekannt, jedoch kann ich mir gut vorstellen, dass viele andere Studenten dadurch was gelernt haben.
+* Ich habe zusätzlich Kentnisse in Java und Spring Boot erlangt.
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+* Die Arbeit und Arbeitsauftelung war durchweg sehr gut.
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+* SalesPoint fand ich für diese Art von Projekt sehr geeignet. Spring Boot fand ich für ein Projekt dieses Umfangs zu komplex.
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+* Es wäre besser ein Einsteigerfreundlicheres Ökosystem als Java / Spring Boot zu nutzen.
+ Es wurde viel zeit mit technischen Problemen, die spezifisch für die verwendeten Technologien sind 
+ (z.B. saß ich 2 Tage daran, einen JPA fehler zu debuggen, welcher daraus resultierte, dass ich in einer Klasse ein "from" Attribut hatte, welches als SQL expression geparsed wurde), verbracht.
+ Die Beschäftigung mit diesen Problemen hatte für mich persönlich keinen Mehrwert.
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+* Alles gut
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?
+* Auch wenn es Sie nicht direkt betrifft, als Informationssystemtechniker ist der Aufwand für dieses Projekts im Zusammenspiel mit den anderen Lehrveranstaltungen zu hoch.

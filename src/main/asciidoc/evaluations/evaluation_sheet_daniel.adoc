@@ -1,0 +1,38 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2020/21
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+Von: Daniel Schmidt
+
+Gruppe: 03
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+* wie Programmieren im Team funktioniert
+* viel Erfahrung im Umgang mit Frameworks gesammelt
+* praktischer Einblick in den Softwareentwicklungsprozess
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+* Kommunikation im Team ist sehr wichtig
+* Arbeitsaufteilung hat gut funktioniert
+* aufgrund der Gruppengröße manchmal zu schnell abgeschweift vom eigentlichen Thema
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+* können einem viel Arbeit abnehmen, bzw. komplizierte Aufgaben wesentlich erleichtern
+* Einarbeitung braucht sehr viel Zeit, da es teils sehr komplex ist
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+* gibt eigentlich nichts groß zu bemängeln
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+* hat immer gut Druck gemacht, dass wir die Meilensteine erreichen
+* war immer gut zu erreichen und konnte zeitnah bei Fragen helfen
+* hat hilfreiche Tipps gegeben, wie man manches besser machen konnte
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?
+* keine weiteren Anmerkungen

@@ -1,0 +1,39 @@
+= Zeiterfassung für Gruppe 3
+
+Notieren Sie die Zeit in Minuten für jeden Entwickler und – getrennt davon – für Team-Treffen pro Woche (Wochengranularität).
+Die individuell erfasste Zeit beinhaltet auch das Lesen von Dokumentationen, Besprechungen mit Teamkollegen und sonstige auf das Praktikum bezogene Aufgaben, außer das *Team-Treffen*.
+
+// See http://asciidoctor.org/docs/user-manual/#tables
+[option="headers"]
+|===
+|Woche |Nils |Alex |Basti |Justus |Daniel |Yaoxin |Meeting
+|1     |540  |300  |360   |150    |180    |400    |100    
+|2     |645  |480  |520   |60     |330    |500    |225    
+|3     |525  |420  |540   |480    |400    |380    |225    
+|4     |495  |60   |540   |400    |420    |400    |280    
+|5     |915  |1200 |1800  |800    |600    |700    |405    
+|6     |300  |480  |480   |400    |240    |100    |90    
+|7     |10    |180  |0     |120    |45     |30     |220    
+|8     |330  |900  |400   |180    |450    |800    |280    
+|9     |900  |900  |500   |840    |600    |300    |135    
+|10    |355  |120  |300   |300    |300    |200    |125    
+|11    |285  |170    | 440     |180    |180    |60      |190    
+|12    |660  |190    | 570     |800     |190      | 120      |230    
+|===
+
+Bitte tragen Sie am Ende des Praktikums noch folgende weitere Werte ein:
+Summe der Arbeitsstunden pro Student:
+
+|===
+|Operation |Nils |Alex |Basti |Justus |Daniel |Yaoxin | Meeting
+|Summe in h | 98,8 |90  |107,5 | 78,5 |65,5     | 66,6 | 40
+|===
+
+Arbeitsstunden pro Woche pro Student:
+
+|===
+|Operation        |Nils |Alex |Basti |Justus |Daniel |Yaoxin | Meeting
+|Summe / 12 in h | 8,2   |7,5    | 9    | 6,5      |5,5      | 5,5  | 3,3   
+|===
+
+Durchschnittliche Arbeitzeit aller Studenten pro Woche: 7 Stunden

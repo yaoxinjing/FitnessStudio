@@ -1,0 +1,59 @@
+.requestListTable{
+	text-align: left;
+	border: 1px solid black;
+}
+
+.center{
+	text-align:center; 
+    margin-left:auto; 
+    margin-right:auto;
+    width: 50%;
+}
+
+.show{
+	position: relative;
+}
+
+.black{
+	color: black;
+}
+
+.requestbutton {
+  background-color: #4CAF50; /* Green */
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  align-items: center;
+}
+
+.checkmark {
+	content: "\2713";
+	color: green;
+	position: relative;
+}
+
+.requesttable {
+    font-size: 2vw;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.requesttable th {
+    text-decoration: underline;
+    padding: 0px 10px 30px 10px;
+    font-size: 1vw;
+}
+
+.requesttable td {
+    padding: 0px 10px 15px 10px;
+    font-size: 1vw;
+}

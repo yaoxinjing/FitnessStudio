@@ -1,0 +1,216 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en"s>
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/request.css}" rel="stylesheet"
+        href="../static/resources/css/request.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{request.title}">Requests</title>
+    </head>
+
+    <body>
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Verwaltungs-Navigationsleiste -->
+        <nav th:include="manageNavigation :: manageNavigation"></nav>
+
+        <!-- Anträge des angemeldeten nutzers -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{request.myRequests}">My Requests</header>
+            <hr>
+            <table class="requesttable">
+            	<thead>
+                    <tr>
+                    	<th id="btelement" th:text="#{request.type}">Type</th>
+                        <th id="btelement" th:text="#{request.filingDate}">Filing Date</th>
+                        <th id="btelement" th:text="#{request.state}">State</th>
+                        <th id="btelement" th:text="#{request.functions}">Functions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${currentUserRequests}">
+                        <td th:text="${request.getTypeString()}">Pausierungsantrag</td>
+                        <td th:text="${request.getFilingDate()}">23.10.2020</td>
+					    <td th:text="${request.getStateString()}">In Process</td>
+                        <td>                            
+							<div th:switch="${request.getTypeString()}">
+								<p th:case="'Pausierungsantrag'"> 											
+									<a th:href="@{/manageRequest/editPauseRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>									
+								</p>
+								<p th:case="'Trainingsantrag'"> 											
+									<a th:href="@{/manageRequest/editTrainingRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>									
+								</p>
+								<p th:case="'Urlaubsantrag'"> 
+									<a  th:href="@{/manageRequest/editVacationRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>
+								</p>
+							</div>                      
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+		
+		<!-- Pausierungsanträge -->
+        <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasAnyRole('BOSS','EMPLOYEE')">
+            <header th:text="#{request.pauseRequests}">Pause Requests</header>
+            <hr>
+            <table class="requesttable">
+                <thead>
+                    <tr>
+                        <th id="btelement" th:text="#{request.applicant}">Applicant</th>
+                        <th id="btelement" th:text="#{request.filingDate}">Filing Date</th>
+                        <th id="btelement" th:text="#{request.month}">Month</th>
+                        <th id="btelement" th:text="#{request.reason}">Reason</th>
+                        <th id="btelement" th:text="#{request.functions}">Functions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${pauseRequests}">
+                        <td>
+                            <a th:text="${request.getContract().getPartner().getFullname()}", th:href="@{/manageProfile/{id}(id=${request.getContract().getPartner().getId()})}">
+                                Max Mustermann
+                            </a>
+                        </td>
+                        <td th:text="${request.getFilingDate()}">23.10.2020</td>
+					    <td th:text="${request.getMonthString()}">November</td>
+					    <td th:text="${request.getReason()}">keine Angabe</td>
+                        <td>                                      
+							<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+							<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+							<a  th:href="@{/manageRequest/editPauseRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+		
+		<!-- Trainingsanträge -->
+        <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasAnyRole('EMPLOYEE','BOSS')">
+            <header th:text="#{request.trainingRequests}">Training Requests</header>
+            <hr>
+            <table class="requesttable">
+                <thead>
+                    <tr>
+                        <th id="btelement" th:text="#{request.applicant}">Applicant</th>
+                        <th id="btelement" th:text="#{request.filingDate}">Filing Date</th>
+                        <th id="btelement" th:text="#{request.date}">Date</th>
+                        <th id="btelement" th:text="#{request.time}">Time</th> 
+                        <th id="btelement" th:text="#{request.employee}">Employee</th>   
+                        <th id="btelement" th:text="#{request.functions}">Functions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${trainingRequests}">
+                        <td>
+                            <a th:text="${request.getContract().getPartner().getFullname()}", th:href="@{/manageProfile/{id}(id=${request.getContract().getPartner().getId()})}">
+                                Max Mustermann
+                            </a>
+                        </td>
+                        <td th:text="${request.getFilingDate()}">23.10.2020</td>
+					    <td th:text="${request.getDateString()}">12.02.21</td>
+					    <td th:text="${request.getTimeString()}">12:02</td>
+					    <td th:text="${request.getEmployee()}">Peter Mueller</td>
+                        <td>                                      
+							<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+							<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+							<a  th:href="@{/manageRequest/editTrainingRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+		
+        <!-- Urlaubsanträge -->
+        <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasRole('BOSS')">
+            <header th:text="#{request.vacationRequests}">Vacation Requests</header>
+            <hr>
+            <table class="requesttable">
+                <thead>
+                    <tr>
+                        <th id="btelement" th:text="#{request.applicant}">Applicant</th>
+                        <th id="btelement" th:text="#{request.filingDate}">Filing Date</th>
+                        <th id="btelement" th:text="#{request.beginning}">Beginning</th>
+                        <th id="btelement" th:text="#{request.end}">End</th>
+                        <th id="btelement" th:text="#{request.reason}">Reason</th>
+                        <th id="btelement" th:text="#{request.functions}">Functions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${vacationRequests}">
+                        <td>
+                            <a th:text="${request.getContract().getPartner().getFullname()}", th:href="@{/manageProfile/{id}(id=${request.getContract().getPartner().getId()})}">
+                                Max Mustermann
+                            </a>
+                        </td>
+                        <td id="btelement16" th:text="${request.getFilingDate()}">23.10.2020</td>
+					    <td id="btelement16" th:text="${request.getBeginningString()}">12.02.21</td>
+					    <td id="btelement16" th:text="${request.getEndString()}">16.02.21</td>
+					    <td id="btelement16" th:text="${request.getReason()}">Konzert</td>
+                        <td>                            
+							<a  th:href="@{/manageRequest/acceptRequest/{id}(id=${request.getId()})}"><span style="color: green;">&#10004;</span></a>
+							<a  th:href="@{/manageRequest/declineRequest/{id}(id=${request.getId()})}"><span style="color: red;">&#10006;</span></a>
+							<a  th:href="@{/manageRequest/editVacationRequest/{id}(id=${request.getId()})}"><span style="color: black;">&#9998;</span></a>                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+		
+		<!-- Bearbeitete Anträge -->
+        <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasRole('BOSS')">
+            <header th:text="#{request.processedRequests}">Processed Requests</header>
+            <hr>
+            <table class="requesttable">
+                <thead>
+                    <tr>
+                        <th th:text="#{request.state}">State</th>
+                        <th th:text="#{request.type}">Type</th>
+                        <th th:text="#{request.applicant}">Applicant</th>
+                        <th th:text="#{request.filingDate}">Filing Date</th>
+                        <th th:text="#{request.processingDate}">Processing Date</th>
+                        <th th:text="#{request.processor}">Processor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each ="request : ${processedRequests}">
+					    <td th:text="${request.getStateString()}">Akzeptiert</td>
+                        <td th:text="${request.getTypeString()}">Pausierungsantrag</td>
+                        <td>
+                            <a th:text="${request.getContract().getPartner().getFullname()}", th:href="@{/manageProfile/{id}(id=${request.getContract().getPartner().getId()})}">
+                                x
+                            </a>
+                        </td>
+					    <td th:text="${request.getFilingDate()}">23.10.2020</td>
+                        <td th:text="${request.getProcessingDate()}">25.10.2020</td>             
+                        <td th:text="${request.getApplicationProcessor().getFullname()}">Hans Wurst</td>  
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+		
+        <!-- Hinzufügen -->     
+        <article class="mainelement" id="rightsidedmainelement">      
+            <header th:text="#{request.addRequest}">Antrag stellen</header>
+            <hr>
+            <a th:href="@{/manageRequest/addPauseRequest}"><button class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{request.addPauseRequest}">Pause Request</button></a>
+            <br>
+            <a th:href="@{/manageRequest/addTrainingRequest}"><button class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{request.addTrainingRequest}">Training Request</button></a>
+            <br>
+			<a th:href="@{/manageRequest/addVacationRequest}" sec:authorize="hasAnyRole('EMPLOYEE','BOSS')"><button class="verwbuttonsColored" id="verwbuttonsBig" th:text="#{request.addVacationRequest}">Vacation Request</button></a>       	
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

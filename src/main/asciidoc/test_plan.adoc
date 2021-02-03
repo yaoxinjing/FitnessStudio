@@ -1,0 +1,87 @@
+= Test-Plan
+
+Dieser Testplan stellt eine vereinfachte Version der IEEE 829-1998 Vorlage dar.
+
+== Einführung
+Dieser Testplan soll einen Überblick darüber verschaffen, welche Klassen durch Tests abgedeckt sind. Er ist hauptsächlich an Entwickler des Projekts gerichtet.
+
+== Aufbau der Testbezeichner (AB-C)
+* A = Art des tests
+** U - Unit Test
+** I - Integrationstest
+* B = Anfangsbuchstabe des Test-Verwalters
+** N - Nils
+** J - Justus
+** S - Sebastian
+** D - Daniel
+** A - Alex
+** Y - Yaoxin
+* C = Nummber des Tests
+** fängt bei jedem Entwickler von vorn an
+
+== Test Gegenstände
+* alle Klassen und Packages
+
+== Zu testende Funktionalitäten
+* Getter und Setter
+* Konstruktoren auf invalite Parameter testen
+* Funktionen auf invalite Parameter testen
+
+== Nicht zu testende Funktionalitäten
+* Probleme die beim Verbindungsaufbau zum Server entstehen könnten
+* Kompatibilitätsprobleme, welche durch Nutzung unzulässiger Browser herbeigeführt werden
+* Salespoint
+* Spring-Klassen und Funktionalitäten
+
+== Herangehensweise
+
+* Klassen werden mit JUnit getestet.
+* Integrationstest nach Bottom-Up Prinzip
+* benötigte Repositories übernehmen
+* wenn benötigt Objekte erzeugen, um Funktionalitäten zu testen, welche ein instanziiertes Objekt vorraussetzen
+
+== Umgebungsvoraussetzungen
+* PC mit Tastatur und Maus oder Laptop benötigt
+* außer einer Entwicklungsumgebung nach Wahl (z.B. Eclipse, IntelliJ, ...), wird keine zusätzliche Software benötigt
+* Daten sind auf einer lokalen Datenbank hinterlegt und werden vom Framework bereit gestellt
+* Kommunikation der Software während des Testens
+** bei lokaler Ausführung ist keine Kommunikation vorhanden, Ergebnisse werden direkt in er IDE bereitgestellt
+** beim CI-Build auf GitHub, wird das Ergebnis über das Internet zum Anfragenden des Testergebnisses übermittelt
+
+== Testfälle und Verantwortlichkeit
+Jede testbezogene Aufgabe muss einem Ansprechpartner zugeordnet werden.
+
+// See http://asciidoctor.org/docs/user-manual/#tables
+[options="headers"]
+|===
+|ID |Anwendungsfall |Vorbedingungen |Eingabe |Ausgabe
+|UJ-1  |Request Getter & Setter |Request wurde erstellt |…       |Methode funktioniert fehlerfrei
+|UJ-2  |PauseRequestForm Getter              |PauseRequestForm wurde erstellt             |…       |Methode funktioniert fehlerfrei
+|UJ-3  |VacationRequestForm Getter              |VacationRequestForm wurde erstellt             |…       |Methode funktioniert fehlerfrei
+|UJ-3  |VacationRequest Getter & Setter              |TrainingRequest wurde erstellt             |…       |Methode funktioniert fehlerfrei
+|UJ-3  |PauseRequest Getter & Setter              |PauseRequest wurde erstellt             |…       |Methode funktioniert fehlerfrei
+|UJ-3  |Training Request Getter & Setter              |TrainningRequest wurde erstellt             |…       |Methode funktioniert fehlerfrei
+|UN-1  |PDFPayCheckExporter Konstruktor | PaycheckExporter wurde erstellet | alle Argumente sind null | Konstruktor wirft IllegalArgumentException
+|UN-2 |PDFPayCheckExporter Liste in String formatieren |PaycheckExporter wurde erstellet |Liste ist null | Funktion wirft IllegalArgumentException
+|UN-3  |PDFPayCheckExporter Liste in String formatieren | PaycheckExporter wurde erstellet | Liste ist leer      | leerer String ""
+|UN-4  |PDFPayCheckExporter Liste in String formatieren |PaycheckExporter wurde erstellet |Liste = ["Trainer","Verkäufer","Reinigungskraft"] | "Trainer, Verkäufer, Reinigungskraft" 
+|UN-5  |PDFPayCheckExporter Liste in String formatieren |PaycheckExporter wurde erstellet |Liste = ["Trainer"] | String ohne Kommata enthält einzelnes Wort: "Trainer"
+|UN-6 |PDFPayCheckExporter exportPDF | PaycheckExporter wurde erstellet | response ist null | Funktions wirft IllegalArgumentException
+|UN-7 |PDFController Funktionen auf invalide Parameter testen | PDFController ist initialisiert | Ein oder alle Parameter sind null  | Funktion wirft IllegalArgumentException
+|UN-8 |PDFNachbestellungsliste Funktionen auf invalide Parameter testen |PDFNachbestellungsExporter Objekt wurde initialisiert | Ein oder alle Parameter sind null | Funktion wirft IllegalArgumentException
+|UN-9 |PDFTransactionsExporter Funktionen auf invalide Parameter testen |PDFTransactionsExporter Objekt wurde initialisiert | Ein oder alle Parameter sind null | Funktion wirft IllegalArgumentException
+|UN-10 |PDFDocument TabellenKopf schreiben Null argument | PDFDocument ist erstellt | alle Argumente sind null | Methode wirft IllegalArgument Exception
+|UN-11 |PDFDocument TabellenKopf testen |PDFDocument ist erstellt | alle Argumente sind valiede | Methode funktioniert fehlerfrei
+|UN-12 |PDFTransaction Tabellen Daten einfügen |PDF Transaction Exporter ist erstellt | user oder Order muss vorhanden sein |Methode funktioniert fehlerfrei
+|UD-1 |ManagerForm Getter |ManagerForm wurde erstellt |… |…
+|UD-2 |Test for Singleton creation in Manager |Kein Manager erstellt |… |… 
+|UD-3 |Test for working Singleton |Singleton-Objekt besteht |Neuer Manager wird versucht zu erstellen |Alter Manager wird ausgegeben
+|UA-1 |Test für Korrekte änderung der "Contract" daten |Contract Objekt besteht |Es wird die "updateData"-Methode mit validen Parametern aufgerufen |Daten werden korrekt übernommen und ausgegeben
+|UA-2 |Test für Contract Setter |Contract Objekt besteht |... |Daten werden korrekt ausgegeben
+|UA-3 |Test für Korrekte änderung der "Address" daten |Address Objekt besteht |Es wird die "updateData"-Methode mit validen Parametern aufgerufen |Daten werden korrekt übernommen und ausgegeben
+|UA-4 |Test für Address Setter |Contract Objekt besteht |... |Daten werden korrekt ausgegeben
+
+|UY-1 |Test fuer AffiliateBonus |User Object herstellen|… |User bekommen 10 eruo
+|UY-2 |Test fuer OperationTime | OperationTime ,Workday object herstellen|Workday object|OperationTime geandert
+|UY-3 |Test fuer UserBalance | User Object herstellen|10 euro|UserBalance geandert
+|===

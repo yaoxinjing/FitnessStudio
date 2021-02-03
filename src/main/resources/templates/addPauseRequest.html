@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{request.addPauseRequest.title}">Add Pause Request</title>
+    </head>
+
+    <body>
+       <!-- Haupt-Navigationsleiste -->
+       <nav th:include="navigation :: navigation"></nav>
+
+       <!-- Verwaltungs-Navigationsleiste -->
+       <nav th:include="manageNavigation :: manageNavigation"></nav>
+        
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{request.addPauseRequest.caption}">Add Pause Request</header>
+            <hr>
+            <p th:if="${showPlausError}" class="alert alert-danger" th:text="#{request.addPauseRequest.plausibilityError}"></p>
+            <form method="post" role="form" class="ui form" id="form" th:action="@{/manageRequest/addPauseRequest}" th:object="${form}">                     
+                <div class="field">
+                    <label for="month" th:text="#{request.addPauseRequest.month}">Month</label>
+                    <input id="month" name="month" th:field="*{month}" th:errorclass="fieldError" type="month" placeholder="YYYY-MM" pattern="[0-9]{4}-[0-9]{2}" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('month')}" th:errors="*{month}" th:text="#{request.addPauseRequest.monthError}">
+                    The field for month should not be empty.</p>
+                </div>
+                <div class="field">
+                    <label for="reason" th:text="#{request.addPauseRequest.reason}">Reason</label>
+                    <input id="reason" name="reason" th:field="*{reason}" th:errorclass="fieldError" type="text" required="required"/><br/>
+                    <p th:if="${#fields.hasErrors('reason')}" th:errors="*{reason}" th:text="#{request.addPauseRequest.reasonError}">
+                    The field for reason should not be empty.</p>
+                </div>                                      
+                <button type="submit" class="verwbuttonsColored" id="verwbuttonsSmall" th:text="#{button.submit}"><span style="color: green;">&#10004;</span></button>
+            </form>           
+        </article>
+    </body>
+</html>

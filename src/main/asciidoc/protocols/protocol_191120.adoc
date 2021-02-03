@@ -1,0 +1,69 @@
+= Protokoll Gruppe 03
+
+Treffen am 19.11.2020
+
+Ort:      BBB +
+Beginn:   11:10 Uhr +
+Ende:     12:20 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+26.11.2020, 11:10 Uhr, BBB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Neuer Meilenstein (29.11.):
+** Entwurfsdiagamm (bis 16.11.) aus Klassendiagramm entwerfen
+** Entwurfsdiagramm als Grundlage für Prototyp
+** Aufgaben in Bereiche aufteilen
+** Wichtigeste Funktion dieses Packages implementieren -> minimal viable product
+** Vertikale Implementierung (jeder macht Frontend und Backend)
+** Prototyp kommt in zusätzlichen Prototyp-Branch, fürPackages einzelne Feature-Branches
+** Auf dieser Grundlage erste Einträge in Entwicklerdocu
+** Evtl. Branch-Protection für Prototyp-Branch nutzen
+** Testplan erstellen
+*** Akzeptanztests (JUnit, Blackbox = keine Einblick in Code)
+*** Unittests (einzelne Funktionen testen, Whitebox = Einblick in Code, keine getter und setter)
+*** Coding-Rules beachten (Testabdeckung = Prozent der Zeilen, die von Tests abgedeckt werden)
+*** Für test driven development nutzen (zuerst Tests schreiben)
+** Prototyp als Grundlage für Zwischenpräsentation (in erster Dezemberwoche)
+** Javascript für Frontend
+
+== Retrospektive des letzten Sprints
+Pflichtenheft wurde überarbeitet, Videoshop-Aufgaben wurden von allen Mitgliedern abgeschlossen
+
+|===
+|Aufgabe |Status |Bemerkung
+|Bewertungen     |Fertiggestellt |
+|Kategorien     |Fertiggestellt |
+|Bestellungen     |Fertiggestellt |Frontend bei richtiger Aufgabe ausführlicher
+|PDF     |Fertiggestellt |
+|Rabatte     |Fertiggestellt |
+|Registrierung     |Fertiggestellt |
+|===
+
+
+== Planung des nächsten Sprints
+Entwurfsdiagramm aus Klassendiagramm ableiten, Prototypen des Fitnessstudios implementieren
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|User     |Verwaltung der Mitglieder |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Employee     |Verwaltung der Mitarbeiter             |Nils                |in Bearbeitung
+|Shop     |Lagerverwaltung des Offline-Shops, Nachbestelliste, MHD-Liste           |Sebastian                |in Bearbeitung
+|Fitnessstudio     |Homepage, main |Yaoxin                |in Bearbeitung
+|===

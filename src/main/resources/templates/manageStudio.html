@@ -1,0 +1,123 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+		href="../static/resources/css/verwaltung.css" type="text/css"/>
+		<link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{manageStudio.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Verwaltungs-Navigationsleiste -->
+        <nav th:include="manageNavigation :: manageNavigation"></nav>
+  
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasRole('BOSS')">
+            <header th:text="#{manageStudio.changeOpening}">Öffnungszeiten bearbeiten</header>
+			<hr>
+			<p th:if="${showoptimeerror}" class="alert alert-danger" th:text="#{manageStudio.optime.inplausibility}"></p>
+            	<form method="post"   role="form" class="ui form" id="form" th:action="@{/infos}" th:object="${operationForm}">
+            	<table class="bigtable">
+                	<thead>
+                  		<tr>
+                        	<th th:text="#{manageStudio.weekday}" id="btelement">Wochentag</th>
+                        	<th th:text="#{manageStudio.openedFrom}" id="btelement">geöffnet von</th>
+                        	<th th:text="#{manageStudio.openedUntil}" id="btelement">schließt um</th>
+                    	</tr>
+                	</thead>
+                		<tbody>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.monday}">Montag</td>
+                        		<td id="btelement"><input type="time" th:name="monday.openingTime" id="monday.openingTime" th:value="${dates.monday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="monday.closeTime"   id="monday.closeTime" th:value="${dates.monday.closeTime}"></td>
+                    		</tr>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.tuesday}">Dienstag</td>
+                        		<td id="btelement"><input type="time" th:name="tuesday.openingTime" id="tuesday.openingTime" th:value="${dates.tuesday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="tuesday.closeTime"   id="tuesday.closeTime"   th:value="${dates.tuesday.closeTime}"></td>
+                    		</tr>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.wednesday}">Mittwoch</td>
+                        		<td id="btelement"><input type="time" th:name="wednesday.openingTime" id="wednesday.openingTime" th:value="${dates.wednesday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="wednesday.closeTime"   id="wednesday.closeTime" th:value="${dates.wednesday.closeTime}"></td>
+                    		</tr>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.thursday}">Donnerstag</td>
+                        		<td id="btelement"><input type="time" th:name="thursday.openingTime" id="thursday.openingTime" th:value="${dates.thursday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="thursday.closeTime"   id="thursday.closeTime" th:value="${dates.thursday.closeTime}"></td>
+                    		</tr>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.friday}">Freitag</td>
+                        		<td id="btelement"><input type="time" th:name="friday.openingTime" id="friday.openingTime" th:value="${dates.friday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="friday.closeTime"   id="friday.closeTime" th:value="${dates.friday.closeTime}"></td>
+                    		</tr>
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.saturday}">Samstag</td>
+                        		<td id="btelement"><input type="time" th:name="saturday.openingTime" id="saturday.openingTime" th:value="${dates.saturday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="saturday.closeTime"   id="saturday.closeTime" th:value="${dates.saturday.closeTime}"></td>
+                    		</tr>
+                    		
+                    		<tr>
+                       	 		<td id="btelement" th:text="#{manageStudio.sunday}">Sonntag</td>
+                        		<td id="btelement"><input type="time" th:name="sunday.openingTime" id="sunday.openingTime" th:value="${dates.sunday.openingTime}"></td>
+                        		<td id="btelement"><input type="time" th:name="sunday.closeTime"   id="sunday.closeTime" th:value="${dates.sunday.closeTime}"></td>
+                    		</tr>
+             		   	</tbody>
+            		</table>
+            <br><br><br>
+            <button type="submit" class="verwbuttonsColored" id="verwbuttonsBig">Übernehmen</button>
+            </form>
+        </article>
+
+         <!-- Hauptelement2 -->
+         <article class="mainelement" id="rightsidedmainelement" sec:authorize="hasRole('BOSS')">
+			<header th:text="#{manageStudio.moreOptions}" >Weitere Bearbeitungsmöglichkeiten</header>
+			<hr>
+            <form  form method="post" role="form" class="ui form" id="form" th:action="@{/editStudioSettings}" th:object="${settingsForm}">
+                <table class="bigtable">
+                    <tr>
+                        <td th:text="#{manageStudio.contractTime}">Vertragslaufzeit in Monaten</td>
+                        <td id="btelement20"><input type="number" id="duration" th:field="*{duration}" th:value="${duration}" min="0"/></td>
+                	</tr>
+                	<tr>
+                    	<td th:text="#{manageStudio.membershipFee}">Mitgliedsbeitrag</td>
+                    	<td class="membershipFee" id="btelement20"><input type="number" id="membershipFee" th:field="*{membershipFee}" th:value="${membershipFee}" min="0"/></td>
+                	</tr>
+                	<tr>
+                    	<td th:text="#{manageStudio.affiliate}">Neuwerberprämie</td>
+                    	<td class="affiliate" id="btelement20"><input type="number" id="affiliate" th:field="*{affiliate}" th:value="${affiliatebonus}" min="0"/></td>
+                	</tr>
+                	<tr>
+                    	<td th:text="#{manageStudio.monthlyPowerCosts}">Neuwerberprämie</td>
+                    	<td class="btelement20" id="btelement20"><input type="number" id="monthlyPowerCosts" th:field="*{monthlyPowerCosts}" th:value="${monthlyPowerCosts}" min="0"/></td>
+                	</tr>
+                	<tr>
+                    	<td th:text="#{manageStudio.monthlyWaterCosts}">Neuwerberprämie</td>
+                    	<td class="btelement20" id="btelement20"><input type="number" id="monthlyWaterCosts" th:field="*{monthlyWaterCosts}" th:value="${monthlyWaterCosts}" min="0"/></td>
+                	</tr>
+                	<tr>
+                    	<td th:text="#{manageStudio.monthlyRentalCosts}">Neuwerberprämie</td>
+                    	<td class="btelement20" id="btelement20"><input type="number" id="monthlyRentalCosts" th:field="*{monthlyRentalCosts}" th:value="${monthlyRentalCosts}" min="0"/></td>
+                	</tr>
+                	
+            	</table>
+            	<br><br><br>
+             	<button type="submit" class="verwbuttonsColored" id="verwbuttonsBig">Übernehmen</button>
+            </form>
+
+		</article>
+		
+		<!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

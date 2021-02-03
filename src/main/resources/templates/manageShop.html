@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{manageShop.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <!-- Verwaltungs-Navigationsleiste -->
+        <nav th:include="manageNavigation :: manageNavigation"></nav>
+
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{manageShop.allProducts}">Alle Shopinhalte</header>
+            <hr>
+            <table class="bigtable">
+                <thead>
+                    <tr>
+                        <th id="btelement" th:text="#{shop.table.name}">Produkt</th>
+                        <th id="btelement" th:text="#{shop.table.price}">Preis</th>
+                        <th id="btelement" th:text="#{shop.table.discount}">Rabatt</th>
+                        <th id="btelement" th:text="#{inventory.amount}">Stock</th>
+                        <th id="btelement" th:text="#{shop.table.edit}">Funktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr th:each="commodity : ${discountedCommoditys}">
+                         <td> <a th:href="@{/catalog/commodity/{id}(id=${commodity.id})}" th:text="${commodity.getName()}" class="verwbuttonsColored" id="verwbuttonsSmall">Wiskey</a></td>
+                        <td th:text="${commodity.getGrossPriceUnitless()}">70€</td>
+                        <td th:text="${commodity.getDiscount()} ? ${commodity.getDiscount()} : '---'">---</td>
+                        <td> <a th:href="@{../stock}" th:text="${inventory.findByProduct(commodity).get()?.getQuantity()}"></a></td>
+                        <td id="btelement20">                   
+                        <a  th:href="@{/catalog/removeCommodity/{id}(id=${commodity.id})}"><span style="color: red;">&#10006;</span></a>
+                        
+                        </td>
+                    </tr>
+                    <tr th:each="commodity : ${undiscountedCommoditys}">
+                        <td> <a th:href="@{/catalog/commodity/{id}(id=${commodity.id})}" th:text="${commodity.getName()}" class="verwbuttonsColored" id="verwbuttonsSmall">Wiskey</a></td>
+                        <td th:text="${commodity.getGrossPriceUnitless()}">70€</td>
+                        <td th:text="${commodity.getDiscount()} ? ${commodity.getDiscount()} : '---'">---</td>
+                        <td> <a th:href="@{../stock}" th:text="${inventory.findByProduct(commodity).get()?.getQuantity()}"></a></td>
+                        <td id="btelement20">                        
+                        <a  th:href="@{/catalog/removeCommodity/{id}(id=${commodity.id})}"><span style="color: red;">&#10006;</span></a>
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <!-- Downloads -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header>Downloads</header>
+            <hr>
+            <div sec:authorize="hasAnyRole('EMPLOYEE','BOSS')">
+                <form method="post" th:action="@{/downloadNBL}">
+                    <button th:text="#{manageShop.reOrder}" class="verwbuttonsColored" id="verwbuttonsBig" type="submit">Nachbestellliste.pdf</button>
+                </form>
+            </div>
+        </article>
+
+        <!-- Hinzufügen -->
+        <article class="rightsinglemainelement">
+            <header><a th:href="@{/catalog/addCommodity}">+</a></header>
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

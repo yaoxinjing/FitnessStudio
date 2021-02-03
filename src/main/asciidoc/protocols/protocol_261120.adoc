@@ -1,0 +1,73 @@
+= Protokoll Gruppe 03
+
+Treffen am 26.11.2020
+
+Ort:      BBB +
+Beginn:   11:10 Uhr +
+Ende:     12:20 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+03.12.2020, 11:10 Uhr, BBB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alexander
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Präsentation (01.12.20, 16:40 Uhr)
+** 1. Teil (10 min): 
+*** Anwendung zeigen, Funktion präsentieren
+*** verschiedene Browser für verschiedene Nutzer
+** 2. Teil:
+*** Vorgehen vorstellen
+*** mündl. Wiedergabe Entwicklerdocu
+*** Vorstellung eigener Teil, Entwurfsmuster
+*** PP-Präsentation
+*** eigene Vorstellung (Name, Anteil)
+*** Code nur in geringem Umfang vorstellen
+*** Schemata verwenden (Patterns)
+*** technische Fachbegriffe erklären
+** 3. Teil (10 min):
+*** Fragerunde
+* Entwurfsdiagramm
+** Methoden nur wenn benötigt auf public
+* Projekt selber
+** evtl. Lastschrift einrichten
+** nur Offline-Shop
+
+== Retrospektive des letzten Sprints
+Entwurfsdiagramm fertiggestellt, Fitnessstudio-Prototyp angefangen
+
+|===
+|Aufgabe |Status |Bemerkung
+|User     |Backend angefangen, bis Freitag Abend zum nächsten internen Meeting dann hoffentlich siginifikanter Fortschritt |
+|Manager     |in Bearbeitung |
+|Requests     |Backend weitesgehend fertig, Frontend noch fehlend |Umsetzung des Status des Antrags unklar
+|Employee     |in Bearbeitung |
+|Shop     |in Bearbeitung |
+|Fitnessstudio    |Backend weitesgehend fertig, Frontend 90 % fertig|  
+|===
+
+
+== Planung des nächsten Sprints
+Entwurfsdiagramm aus Klassendiagramm ableiten, Prototypen des Fitnessstudios implementieren
+
+[option="headers"]
+|===
+|Aufgabe |Beschreibung |Verantwortlicher |Status
+|User     |Verwaltung der Mitglieder |Alexander                |in Bearbeitung
+|Manager     |Manager als Verwalter des Fitnessstudios, Statistiken |Daniel                |in Bearbeitung
+|Requests     |Verwaltung und Erstellung von Anträgen |Justus                |in Bearbeitung
+|Employee     |Verwaltung der Mitarbeiter             |Nils                |in Bearbeitung
+|Shop     |Lagerverwaltung des Offline-Shops, Nachbestelliste, MHD-Liste           |Sebastian                |in Bearbeitung
+|Fitnessstudio     |Homepage, main |Yaoxin                |in Bearbeitung
+|===

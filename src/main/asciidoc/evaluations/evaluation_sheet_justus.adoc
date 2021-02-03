@@ -1,0 +1,27 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2020/21
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von: Justus Möller
+
+**Gruppe: 03
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+* Erfahrungen mit Java gesammelt
+* objekt-orientiertes Programmieren weiter kennengelernt
+* Umgang mit Spring gelernt
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+* gute Arbeitsteilung
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+* Spring ist gute Unterstützung bei bspw. Anmeldevorgängen
+* Salespoint findet in Realität keine Anwendung
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+
+== Feedback für den Tutor
+* Tutor gab gut Hinweise zu Meilensteinen und zu erledigenden Sachen
+
+== Sonstiges und Anmerkungen

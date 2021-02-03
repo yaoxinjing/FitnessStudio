@@ -1,0 +1,32 @@
+= Protokoll Gruppe 03
+
+Treffen am 27.10.2020
+
+Ort:      BBB +
+Beginn:   18:20 Uhr +
+Ende:     20:45 Uhr
+
+__Schriftführer:__ Justus
+
+*Nächstes Treffen:* +
+05.11.2020, 11:10 Uhr, BBB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Anita Fritzsche (Kunde)
+- Nils (SM)
+- Daniel
+- Alex
+- Yaoxin
+- Sebastian
+- Justus
+
+== Bemerkungen
+* Hinweise zur Bearbeitung des Projektes
+* Terminfindung für Treffen mit Kunde
+* Gästebuch als Beispielprojekt
+* E-Mail-Input im Gästebuch implementieren
+
+== Planung des nächsten Sprints
+E-Mail-Aufgabe des Gästebuchs bis zum nächsten Termin fertigstellen

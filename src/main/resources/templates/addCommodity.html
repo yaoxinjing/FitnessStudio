@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+    href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+    <link th:href="@{/resources/css/commodity.css}" rel="stylesheet"
+          href="../static/resources/css/commodity.css" type="text/css"/>
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+    href="../static/resources/css/style.css" type="text/css"/>
+    <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+	href="../static/resources/css/navigationbar.css" type="text/css"/>
+	<link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+    <meta charset="utf-8">
+    <title th:text="#{commodity.title}">Fitnessstudio</title>
+</head>
+<body>
+    <div id="brpic"></div>
+	<nav th:include="navigation :: navigation"></nav>
+	<br>
+
+
+	<article class="mainelement" id="smallmainelement">		
+		<form method="post" role="form" id="form" th:action="@{/catalog/addCommodity/}" th:object="${form}">
+			<header th:text="#{commodity.create}">Produktbezeichnung</header>
+			<hr>
+
+
+			<table class="bigtable">
+				<tr>
+					<td id="btelement">
+						<h3 th:text="#{commodity.name}">Name</h3>
+						<input class="text" name="name" id="name" type="text" />
+						
+						<h3 th:text="#{commodity.description}">Beschreibung</h3>
+						<input class="text" name="description" id="description"  type="text" />
+						
+						<h3 th:text="#{commodity.price}">Preis</h3>
+						<input class="text" name="price" id="price" type="number" min="0" step="0.01" th:value="${0}"/>
+						
+						<h3 th:text="#{commodity.discount}">Rabatt</h3>
+						<input class="text" name="discount" id="discount" pattern="[^-]+"/>
+						
+						<h3 th:text="#{commodity.minAmount}">Mindestanzahl</h3>
+						<input class="text" name="minAmount" id="minAmount" type="number" min="0" step="1" th:value="${0}"/>
+						
+						<h3 th:text="#{commodity.type}">Type</h3>
+						<input class="text" name="type" id="type" type="number" min="0" step="1" max="2" th:value="${0}"/>
+						
+						<h3 th:text="#{commodity.stock}">Type</h3>
+						<input class="text" name="stock" id="stock" type="number" min="0" step="1" th:value="${0}"}/>
+						
+						<h3 th:text="#{commodity.mhb}">Type</h3>
+						<input class="text" name="mhb" id="mhb" type="date" />
+						
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<button type="submit" id="verwbuttons">Übernehmen</button>
+			
+	
+
+			
+		</form>
+ 	</article>	
+</body>
+</html>

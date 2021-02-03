@@ -1,0 +1,178 @@
+/* hauptelement */
+.mainelement {
+    top: 70px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    background-color:#A4A4A4;
+    border-radius: 10px;  
+    opacity: 0.9;
+    padding: 0px 50px 10px 50px;
+    border-style: solid;
+    border-color: #424242;
+    line-height: normal;
+}
+
+
+/* p-Tag der mainelemente anpassen */
+.mainelement p{
+    padding: 1%;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+.mainelement th{
+    font-size: 2vw;
+}
+
+.mainelement td{
+  font-size: 2vw;
+}
+
+.mainelement label{
+    text-align: left;
+    font-size: 70%;
+}
+
+/* überschriften der Hauptelemente anpassen */
+.mainelement header{
+    font-size: 2.5vw;
+    /* text-decoration: underline; */
+    font-weight: bold;
+    padding: 2% 0px 1% 0px;
+}
+
+
+
+.bigtable {
+    font-size: 2vw;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bbtable {
+  font-size: 2vw;
+  text-align: center;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tablelefttextalign {
+    text-align: left;
+    font-size: 2vw;
+}
+
+
+.bigtable th {
+    text-decoration: underline;
+    padding: 0px 0px 30px 0px;
+    font-size: 1vw;
+}
+
+.bigtable td {
+  font-size: 2vw;
+}
+
+.bbtable td {
+  font-size: 0.3vw;
+}
+
+.bbtable th {
+  font-size: 1vw;
+}
+
+.smalltable td {
+  font-size: 1vw;
+}
+
+
+#btelement {
+    width: 10%;
+}
+
+#btelement16 {
+  width: 16%;
+}
+
+#btelement20 {
+  width: 20%;
+}
+
+.bte {
+  padding: 10px;
+  width: 16%;
+}
+
+.checkbox {
+	margin: .4rem;
+}
+
+/* ----------- */
+
+/* styling für login und register Seite */
+#smallmainelement {
+    top: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/* styling für Verwaltungsseite */
+#rightsidedmainelement {
+    margin-left: 25%;
+    margin-right: 20%;
+    top: 15%;
+}
+
+#rightsidedmainelementNOP {
+  margin-left: 25%;
+  margin-right: 20%;
+  top: 15%;
+  opacity: 0.99;
+}
+
+hr {
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid #424242;
+  margin: 1vw 0; padding: 0; 
+}
+
+/* anfahrt */
+.maps {
+  margin: 10px;
+  width: 100%;
+  height: 50%;
+  
+}
+
+/* Hintergrund */
+#brpic {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../bilder/backround1.jpg);
+}
+
+/* weitere statische einstellungen */
+body {
+  margin: 0px;
+}
+
+iframe {
+  margin: 20px;
+}
+
+.statistic{
+	z-index: 2;
+}

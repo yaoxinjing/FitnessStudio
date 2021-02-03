@@ -1,0 +1,149 @@
+.verwtable {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 15%;
+    background-color:#424242;
+    border-radius: 0px 8px 8px 0px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1%;
+    line-height: normal;
+}
+
+.verwtable header {
+    font-size: 2.2vw;
+    padding: 2%;
+}
+
+.verwtable a {
+    font-size: 2.2vw;
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 2%;
+}
+
+#choosen {
+    font-weight: bold;
+    color: #1BA157;
+}
+
+.verwtable a:hover {
+    /*text-decoration: underline;*/
+    color: #f2f2f2;
+    background-color: #1BA157;
+    border-radius: 30% 0% 30% 0%;
+}
+
+#verwbuttons {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+#verwbuttonsbig {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+}
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+.verwbuttonsColored {
+    background-color: #424242;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 7vw;
+}
+
+#verwbuttonsSmall{
+    font-size: 1vw;
+    padding: 5px 10px;
+    margin: 1px;
+}
+
+#verwbuttonsNav{
+    font-size: 1.7vw;
+    padding: 10px 15px;
+    margin: 1px;
+    border-radius: 5%;
+    width: 13vw;
+}
+
+#verwbuttonsBig{
+    font-size: 2vw;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    width: 25vw;
+}
+
+#verwbuttonsMed{
+    font-size: 1.5vw;
+    padding: 5px 10px;
+    margin: 4px 2px;
+    width: 20vw;
+}
+
+.stockInput {
+    font-size: 1.5vw;
+    width: 15%;
+}
+
+.verwbuttonsColored:hover {
+    background-color: #1BA157;
+}
+
+#verwinputs {
+    font-size: 100%;
+    width: 150px;
+    height: auto;
+}
+
+
+/* Plus button bei anträgen */
+.rightsinglemainelement {
+    margin-left: 50%;
+    margin-right: 45%;
+    margin-bottom: 10%;
+    top: 15%;
+    background-color: #A4A4A4;
+    border-radius: 50px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 2; 
+    opacity: 0.9;
+    padding: 5px;
+  }
+
+  
+  .rightsinglemainelement header{
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0px 30px 0px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  
+  .rightsinglemainelement:hover{
+      background-color: #1BA157;
+      color: #f2f2f2;
+  }
+  
+  /* ---------- */
+
+
+.manageHeader {
+    color: #1BA157;
+}
+
+.manageHr {
+    background-color: white;
+}

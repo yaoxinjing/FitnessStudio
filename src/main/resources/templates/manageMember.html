@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/verwaltung.css}" rel="stylesheet"
+        href="../static/resources/css/verwaltung.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{manageMembers.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+      <!-- Haupt-Navigationsleiste -->
+      <nav th:include="navigation :: navigation"></nav>
+
+      <!-- Verwaltungs-Navigationsleiste -->
+      <nav th:include="manageNavigation :: manageNavigation"></nav>
+
+        <!-- Hauptelement1 -->
+        <article class="mainelement" id="rightsidedmainelement">
+            <header th:text="#{manageMembers.allMembers}">Alle Mitglieder</header>
+            <hr>
+            <table class="bigtable">
+                <thead>
+                    <tr>
+                        <th th:text="#{manageMembers.member}" id="btelement">Mitglied</th>
+                        <th th:text="#{manageMembers.username}" id="btelement">Username</th>
+                        <th th:text="#{manageMembers.contractEnd}" id="btelement">Vertragsende</th>
+                        <th th:text="#{manageMembers.balance}" id="btelement">Guthaben</th>
+                        <th th:text="#{manageMembers.functionalities}" id="btelement">Funktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each=" user : ${userList}">
+                        
+                            <!-- <td th:text="${user.fullname}" id="btelement">Angelika Anglersfrau</td> -->
+                        <td>
+                            <a th:text="${user.fullname}", th:href="@{/manageProfile/{id}(id=${user.id})}">
+                                x
+                            </a>
+                        </td>     
+                        <td th:text="${user.getUsername()}">user1</td>                 
+                        <td th:text="${user.getContract().endTimeString()}">12.11.2022</td>
+                        <td th:text="${user.getBalance()}">10 EUR</td>
+                        <td> <a  th:href="@{/user/remove/{id}(id=${user.id})}"><span style="color: red;">&#10006;</span></a></td>
+                        
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        
+        <!-- Guthaben aufladen -->
+       <article class="mainelement" id="rightsidedmainelement">
+           <header th:text="#{manageMembers.changeUserBalance}">Add User Balance</header>
+           <hr>
+           <form th:action="@{/manageMember}" role="form" class="ui form" th:method="post">
+               <div class="field">
+               	   <label for="username" th:text="#{manageMembers.username}">Username</label>
+               	   <input name="username" type="text" th:name="username">
+               </div>
+               <div class="field">
+                   <label for="balance" th:text="#{manageMembers.balance}">Balance</label>
+                   <input name="balance" type="number" step="1" min="1" th:value="0"  th:name="balance">
+               </div>
+               <button class="verwbuttonsColored" id="verwbuttonsSmall" type="submit" th:text="#{button.submit}">Submit</button>
+               <!-- <input name="balance" type="text" th:value="0"  th:name="balance">
+               <button class="verwbuttonsColored" id="verwbuttonsSmall" type="submit">Submit</button> -->
+           </form>
+       </article>
+       
+       <!-- footer Navigation -->
+    <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>

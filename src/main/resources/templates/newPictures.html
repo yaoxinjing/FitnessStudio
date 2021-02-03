@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+    <head>
+        <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
+          href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"
+          href="../static/resources/css/style.css" type="text/css"/>
+        <link th:href="@{/resources/css/navigationbar.css}" rel="stylesheet"
+        href="../static/resources/css/navigationbar.css" type="text/css"/>
+        <link th:href="@{/resources/css/newPictures.css}" rel="stylesheet"
+        href="../static/resources/css/newPictures.css" type="text/css"/>
+        <link th:href="@{/resources/css/footer.css}" rel="stylesheet"
+        href="../static/resources/css/footer.css" type="text/css"/>
+        <meta charset="utf-8">
+        <title th:text="#{newPictures.title}">Fitnessstudio</title>
+    </head>
+
+    <body>
+        <!-- Haupt-Navigationsleiste -->
+        <nav th:include="navigation :: navigation"></nav>
+
+        <article class="pictureMainElement">       
+            <img src="https://images.unsplash.com/photo-1590240092079-a7f1957bb6eb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTUyfHxmaXRuZXNzfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60">
+            <header class="overlay">
+                KRAFTTRAINING<br><br>
+                Sie sind nicht so der Ausdauer-Typ? Kein Problem, wir verfügen
+                auch über eine Vielzahl an Kurzhanteln, damit Sie ihr Krafttraining maximal 
+                individuell gestalten könnten.</header>
+        </article>
+
+        <article class="pictureMainElement">    
+            <img src="https://images.unsplash.com/photo-1542766788-a2f588f447ee?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxmaXRuZXNzfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60">           
+            <header class="overlay">
+                AUSDAUERTRAINING<br><br>
+                Sie wollen sich vor dem Training gut erwärmen, oder wollen
+                ihr Training zum Schluss noch mit einer Sprinteinheit abschließen?
+                Unsere Ausdauerabteilung macht es möglich.</header>
+        </article>
+        <article class="pictureMainElement">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fGZpdG5lc3N8ZW58MHx8MHw%3D&auto=format&fit=crop&w=600&q=60">        
+            <header class="overlay">
+                LANGHANTELN<br><br>
+                Kurzhanteln sind ihnen zu langweilig? Kein Problem, ihnen stehen auch
+                Langhanteln mit einer Vielzahl verschiedener Gewichte zur Verfügung.</header>
+        </article>
+
+        <!-- footer Navigation -->
+        <nav th:include="footerNav :: footerNav"></nav>
+    </body>
+</html>
